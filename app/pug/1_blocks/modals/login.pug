@@ -1,0 +1,22 @@
+.modal
+	.modal_container#login
+		.modal_content
+			.modal_header
+				b.modal_title Вход на сайт
+
+			form(action="#" method="post").form
+				.form_tf-wrapper
+					input(type="email" name="login" placeholder="Электронная почта").form_tf
+				.form_tf-wrapper
+					input(type="password" name="pass" placeholder="Пароль").form_tf
+				.form_actions
+					button(type="submit").btn Войти
+					a(href="#register").btn.__light-blue.mopen Регистрация
+			
+				.form_actions.__pass-remind
+					span Забыли пароль? 
+					a(href="#pass-remind").mopen Восстановить
+
+		a(href="#").modal_close
+
+	.modal_overlay

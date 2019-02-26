@@ -1,0 +1,70 @@
+extends ../0_base/template
+
+block title
+	title Корзина
+
+block content
+	.l-wrapper.page-content
+		ul.breadcrumbs
+			li.breadcrumbs_item: a(href="#").breadcrumbs_link Главная
+			li.breadcrumbs_item: a(href="#").breadcrumbs_link Корзина
+
+		.page-header
+			h1.page-header_title Контактные данные
+
+		.cart
+			.cart_content
+				form(action="#" method="post").form.cart_form
+					b.form_section-title Данные получателя
+
+					.form_tf-wrapper
+						label(for="recipient-name").form_tf-label ФИО:
+						input(type="text" name="name" id="recipient-name" value="Олегов Олег Олегович").form_tf
+					.form_tf-wrapper
+						label(for="recipient-tel").form_tf-label Номер телефона:
+						input(type="tel" name="tel" id="recipient-tel" value="+7 910 123-45-67").form_tf
+					.form_tf-wrapper
+						label(for="recipient-email").form_tf-label Электронная почта:
+						input(type="email" name="email" id="recipient-email" value="root@prostordesign.ru").form_tf
+
+					b.form_section-title Адрес доставки
+
+					.form_tf-wrapper
+						label(for="delivery-street").form_tf-label Улица:
+						input(type="text" name="street" id="delivery-street" value="Советская площадь").form_tf
+					.form_tf-wrapper
+						label(for="delivery-house").form_tf-label Дом:
+						input(type="text" name="house" id="delivery-house" value="5").form_tf
+					.form_tf-wrapper
+						label(for="delivery-flat").form_tf-label Квартира:
+						input(type="text" name="flat" id="delivery-flat" value="207").form_tf
+					.form_tf-wrapper
+						label(for="delivery-comment").form_tf-label Комментарий:
+						textarea(rows="8" name="comment" id="delivery-comment").form_tf.
+							Пожалуйста позвоните мне, когда будете доставлять. Осторожно, злая собака!
+
+				.cart_checkout.__like-aside
+					b.cart_section-title Детали заказа:
+
+					ul.cart_totals
+						li.cart_totals-item
+							span.cart_totals-prop Количество товаров
+							b.cart_totals-val 13 <span class="cart_totals-val-symbol">шт.</span>
+						li.cart_totals-item
+							span.cart_totals-prop Стоимость товаров
+							b.cart_totals-val 8 729 <span class="cart_totals-val-symbol">₽</span>
+						li.cart_totals-item
+							span.cart_totals-prop Доставка
+							b.cart_totals-val самовывоз
+						li.cart_totals-item
+							span.cart_totals-prop Способ оплаты
+							b.cart_totals-val наличные
+						li.cart_totals-item.__line
+						li.cart_totals-item.__bold
+							span.cart_totals-prop Общая сумма заказа
+							b.cart_totals-val 8 729 <span class="cart_totals-val-symbol">₽</span>
+
+
+			.cart_actions
+				a(href="#").btn.__light-blue.__big Назад
+				a(href="#").btn.__big Оформить заказ

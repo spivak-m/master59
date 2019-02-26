@@ -1,0 +1,87 @@
+.cabinet
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	align-items: flex-start
+
+.cabinet_menu
+	flex-shrink: 0
+	width: 330px
+	margin-right: 20px
+	border-radius: 3px
+	overflow: hidden
+	border: 1px solid #e2e2e2
+
+.cabinet_menu-list
+	list-style: none
+	margin: 0
+	padding: 0
+
+.cabinet_menu-link
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	align-items: center
+	min-height: 80px
+	width: 100%
+	font-size: .833rem
+	text-decoration: none
+	color: $blue
+	line-height: 1
+	padding-left: 30px
+
+	&:hover:not(.__is-active)
+		opacity: .9
+	
+	&.__is-active
+		background-color: $blue
+		color: #fff
+		pointer-events: none
+
+	.icon
+		font-size: 1.2rem
+		margin-right: 19px
+		font-weight: 300
+
+		&-sign-out,
+		&-map
+			font-size: 1.1rem
+
+.cabinet_content
+	flex-grow: 1
+	border-radius: 3px
+	border: 1px solid #e2e2e2
+	padding: 25px 30px
+
+.cabinet_title
+	font-size: .888rem
+	line-height: 1
+	font-weight: 500
+	display: block
+	margin-bottom: 20px
+
+@media screen and (max-width: 1040px)
+	.cabinet
+		flex-direction: column
+
+	.cabinet_menu
+		width: 100%
+		margin-bottom: 30px
+	
+	.cabinet_menu-link
+		font-size: .937rem
+
+		.icon
+			font-size: 1.37rem
+
+	.cabinet_content
+		width: 100%
+		padding: 15px 10px
+
+	.cabinet_title
+		font-size: 1rem
+		

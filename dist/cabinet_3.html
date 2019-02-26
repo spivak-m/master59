@@ -1,0 +1,792 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8"/>
+    <title>Личный кабинет</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link rel="stylesheet" href="css/normalize.css"/>
+    <link rel="stylesheet" href="css/styles.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"/>
+    <link rel="stylesheet" href="css/libs/owl.theme.custom.min.css"/>
+    <link href="http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="css/libs/fotorama.custom.css"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="site-header_first">
+        <div class="l-wrapper site-header_row"><a class="site-header_logo" href="index.html"><img src="media/img/site-logo.png" alt="Логотип сайта"/></a>
+          <ul class="site-header_contacts">
+            <li class="site-header_contact"><span>Контактный телефон</span><a href="#">8 3424 20 20 80</a></li>
+          </ul>
+          <div class="site-header_search">
+            <form class="search-form" action="#" method="get">
+              <input class="search-form_input" type="text" name="search" placeholder="Поиск в магазине"/>
+              <button class="search-form_btn" type="submit">
+                  <svg class="icon icon-search ">
+                    <use xlink:href="media/img/sprite.svg#search"></use>
+                  </svg>
+              </button>
+            </form>
+          </div>
+          <div class="site-header_user-block">
+            <div class="user-block"><a class="user-block_item mopen" href="#login"><i class="user-block_item-ic">
+                    <svg class="icon icon-user ">
+                      <use xlink:href="media/img/sprite.svg#user"></use>
+                    </svg></i>Вход</a><a class="user-block_item __cart" href="cart_1.html"><i class="user-block_item-ic">
+                    <svg class="icon icon-shopping-cart ">
+                      <use xlink:href="media/img/sprite.svg#shopping-cart"></use>
+                    </svg><span class="user-block_cart-counter">2</span></i>Корзина</a><a class="user-block_item __m-menu js-m-menu-open" href="#"><i class="user-block_item-ic">
+                    <svg class="icon icon-bars ">
+                      <use xlink:href="media/img/sprite.svg#bars"></use>
+                    </svg></i></a></div>
+          </div>
+        </div>
+      </div>
+      <div class="site-header_second m-menu js-m-menu">
+        <div class="l-wrapper">
+          <div class="site-header_search">
+            <form class="search-form" action="#" method="get">
+              <input class="search-form_input" type="text" name="search" placeholder="Поиск в магазине"/>
+              <button class="search-form_btn" type="submit">
+                  <svg class="icon icon-search ">
+                    <use xlink:href="media/img/sprite.svg#search"></use>
+                  </svg>
+              </button>
+            </form>
+          </div>
+          <div class="site-header_menu">
+            <nav class="site-nav">
+              <div class="site-nav_overlay"></div>
+              <ul class="site-nav_list">
+                <li class="site-nav_item __catalog-dropdown"><a class="site-nav_link __catalog js-sn-dropdown-open" href="#">Каталог товаров
+                      <svg class="icon icon-bars ">
+                        <use xlink:href="media/img/sprite.svg#bars"></use>
+                      </svg></a>
+                  <ul class="site-nav_dropdown js-site-submenu">
+                    <li class="site-nav_dropdown-item __m-back"><a class="site-nav_dropdown-link __back" href="#">Назад</a></li>
+                    <li class="site-nav_dropdown-item"><a class="site-nav_dropdown-link" href="#">Строительные материалы</a>
+                      <div class="site-nav_catalog-dropdown"><a class="site-nav_catalog-back" href="#">Назад</a>
+                        <div class="site-nav_catalog-col">
+                          <ul class="site-nav_catalog-list">
+                            <li class="site-nav_catalog-item __title"><a class="site-nav_catalog-link" href="#">Категория</a></li>
+                            <li class="site-nav_catalog-item"><a class="site-nav_catalog-link" href="#">Подкатегория <span class="site-nav_catalog-count">10</span></a></li>
+                            <li class="site-nav_catalog-item"><a class="site-nav_catalog-link" href="#">Подкатегория <span class="site-nav_catalog-count">10</span></a></li>
+                            <li class="site-nav_catalog-item"><a class="site-nav_catalog-link" href="#">Подкатегория <span class="site-nav_catalog-count">10</span></a></li>
+                            <li class="site-nav_catalog-item"><a class="site-nav_catalog-link" href="#">Подкатегория <span class="site-nav_catalog-count">10</span></a></li>
+                          </ul>
+                          <ul class="site-nav_catalog-list">
+                            <li class="site-nav_catalog-item __title"><a class="site-nav_catalog-link" href="#">Категория</a></li>
+                            <li class="site-nav_catalog-item"><a class="site-nav_catalog-link" href="#">Подкатегория <span class="site-nav_catalog-count">10</span></a></li>
+                            <li class="site-nav_catalog-item"><a class="site-nav_catalog-link" href="#">Подкатегория <span class="site-nav_catalog-count">10</span></a></li>
+                          </ul>
+                          <ul class="site-nav_catalog-list">
+                            <li class="site-nav_catalog-item __title"><a class="site-nav_catalog-link" href="#">Категория</a></li>
+                            <li class="site-nav_catalog-item"><a class="site-nav_catalog-link" href="#">Подкатегория <span class="site-nav_catalog-count">10</span></a></li>
+                            <li class="site-nav_catalog-item"><a class="site-nav_catalog-link" href="#">Подкатегория <span class="site-nav_catalog-count">10</span></a></li>
+                            <li class="site-nav_catalog-item"><a class="site-nav_catalog-link" href="#">Подкатегория <span class="site-nav_catalog-count">10</span></a></li>
+                            <li class="site-nav_catalog-item"><a class="site-nav_catalog-link" href="#">Подкатегория <span class="site-nav_catalog-count">10</span></a></li>
+                            <li class="site-nav_catalog-item"><a class="site-nav_catalog-link" href="#">Подкатегория <span class="site-nav_catalog-count">10</span></a></li>
+                            <li class="site-nav_catalog-item"><a class="site-nav_catalog-link" href="#">Подкатегория <span class="site-nav_catalog-count">10</span></a></li>
+                            <li class="site-nav_catalog-item"><a class="site-nav_catalog-link" href="#">Подкатегория <span class="site-nav_catalog-count">10</span></a></li>
+                          </ul>
+                        </div>
+                        <div class="site-nav_catalog-col">
+                          <ul class="site-nav_catalog-list">
+                            <li class="site-nav_catalog-item __title"><a class="site-nav_catalog-link" href="#">Категория</a></li>
+                            <li class="site-nav_catalog-item"><a class="site-nav_catalog-link" href="#">Подкатегория <span class="site-nav_catalog-count">10</span></a></li>
+                            <li class="site-nav_catalog-item"><a class="site-nav_catalog-link" href="#">Подкатегория <span class="site-nav_catalog-count">10</span></a></li>
+                            <li class="site-nav_catalog-item"><a class="site-nav_catalog-link" href="#">Подкатегория <span class="site-nav_catalog-count">10</span></a></li>
+                            <li class="site-nav_catalog-item"><a class="site-nav_catalog-link" href="#">Подкатегория <span class="site-nav_catalog-count">10</span></a></li>
+                          </ul>
+                          <ul class="site-nav_catalog-list">
+                            <li class="site-nav_catalog-item __title"><a class="site-nav_catalog-link" href="#">Категория</a></li>
+                            <li class="site-nav_catalog-item"><a class="site-nav_catalog-link" href="#">Подкатегория <span class="site-nav_catalog-count">10</span></a></li>
+                            <li class="site-nav_catalog-item"><a class="site-nav_catalog-link" href="#">Подкатегория <span class="site-nav_catalog-count">10</span></a></li>
+                          </ul>
+                          <ul class="site-nav_catalog-list">
+                            <li class="site-nav_catalog-item __title"><a class="site-nav_catalog-link" href="#">Категория</a></li>
+                            <li class="site-nav_catalog-item"><a class="site-nav_catalog-link" href="#">Подкатегория <span class="site-nav_catalog-count">10</span></a></li>
+                            <li class="site-nav_catalog-item"><a class="site-nav_catalog-link" href="#">Подкатегория <span class="site-nav_catalog-count">10</span></a></li>
+                            <li class="site-nav_catalog-item"><a class="site-nav_catalog-link" href="#">Подкатегория <span class="site-nav_catalog-count">10</span></a></li>
+                            <li class="site-nav_catalog-item"><a class="site-nav_catalog-link" href="#">Подкатегория <span class="site-nav_catalog-count">10</span></a></li>
+                            <li class="site-nav_catalog-item"><a class="site-nav_catalog-link" href="#">Подкатегория <span class="site-nav_catalog-count">10</span></a></li>
+                            <li class="site-nav_catalog-item"><a class="site-nav_catalog-link" href="#">Подкатегория <span class="site-nav_catalog-count">10</span></a></li>
+                            <li class="site-nav_catalog-item"><a class="site-nav_catalog-link" href="#">Подкатегория <span class="site-nav_catalog-count">10</span></a></li>
+                          </ul>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="site-nav_dropdown-item"><a class="site-nav_dropdown-link" href="#">Отделочные материалы</a>
+                      <div class="site-nav_catalog-dropdown"><a class="site-nav_catalog-back" href="#">Назад</a>
+                        <div class="site-nav_catalog-col">
+                          <ul class="site-nav_catalog-list">
+                            <li class="site-nav_catalog-item __title"><a class="site-nav_catalog-link" href="#">Категория</a></li>
+                            <li class="site-nav_catalog-item"><a class="site-nav_catalog-link" href="#">Подкатегория <span class="site-nav_catalog-count">10</span></a></li>
+                            <li class="site-nav_catalog-item"><a class="site-nav_catalog-link" href="#">Подкатегория <span class="site-nav_catalog-count">10</span></a></li>
+                            <li class="site-nav_catalog-item"><a class="site-nav_catalog-link" href="#">Подкатегория <span class="site-nav_catalog-count">10</span></a></li>
+                            <li class="site-nav_catalog-item"><a class="site-nav_catalog-link" href="#">Подкатегория <span class="site-nav_catalog-count">10</span></a></li>
+                          </ul>
+                          <ul class="site-nav_catalog-list">
+                            <li class="site-nav_catalog-item __title"><a class="site-nav_catalog-link" href="#">Категория</a></li>
+                            <li class="site-nav_catalog-item"><a class="site-nav_catalog-link" href="#">Подкатегория <span class="site-nav_catalog-count">10</span></a></li>
+                            <li class="site-nav_catalog-item"><a class="site-nav_catalog-link" href="#">Подкатегория <span class="site-nav_catalog-count">10</span></a></li>
+                          </ul>
+                          <ul class="site-nav_catalog-list">
+                            <li class="site-nav_catalog-item __title"><a class="site-nav_catalog-link" href="#">Категория</a></li>
+                            <li class="site-nav_catalog-item"><a class="site-nav_catalog-link" href="#">Подкатегория <span class="site-nav_catalog-count">10</span></a></li>
+                            <li class="site-nav_catalog-item"><a class="site-nav_catalog-link" href="#">Подкатегория <span class="site-nav_catalog-count">10</span></a></li>
+                            <li class="site-nav_catalog-item"><a class="site-nav_catalog-link" href="#">Подкатегория <span class="site-nav_catalog-count">10</span></a></li>
+                            <li class="site-nav_catalog-item"><a class="site-nav_catalog-link" href="#">Подкатегория <span class="site-nav_catalog-count">10</span></a></li>
+                            <li class="site-nav_catalog-item"><a class="site-nav_catalog-link" href="#">Подкатегория <span class="site-nav_catalog-count">10</span></a></li>
+                            <li class="site-nav_catalog-item"><a class="site-nav_catalog-link" href="#">Подкатегория <span class="site-nav_catalog-count">10</span></a></li>
+                            <li class="site-nav_catalog-item"><a class="site-nav_catalog-link" href="#">Подкатегория <span class="site-nav_catalog-count">10</span></a></li>
+                          </ul>
+                        </div>
+                        <div class="site-nav_catalog-col">
+                          <ul class="site-nav_catalog-list">
+                            <li class="site-nav_catalog-item __title"><a class="site-nav_catalog-link" href="#">Категория</a></li>
+                            <li class="site-nav_catalog-item"><a class="site-nav_catalog-link" href="#">Подкатегория <span class="site-nav_catalog-count">10</span></a></li>
+                            <li class="site-nav_catalog-item"><a class="site-nav_catalog-link" href="#">Подкатегория <span class="site-nav_catalog-count">10</span></a></li>
+                            <li class="site-nav_catalog-item"><a class="site-nav_catalog-link" href="#">Подкатегория <span class="site-nav_catalog-count">10</span></a></li>
+                            <li class="site-nav_catalog-item"><a class="site-nav_catalog-link" href="#">Подкатегория <span class="site-nav_catalog-count">10</span></a></li>
+                          </ul>
+                          <ul class="site-nav_catalog-list">
+                            <li class="site-nav_catalog-item __title"><a class="site-nav_catalog-link" href="#">Категория</a></li>
+                            <li class="site-nav_catalog-item"><a class="site-nav_catalog-link" href="#">Подкатегория <span class="site-nav_catalog-count">10</span></a></li>
+                            <li class="site-nav_catalog-item"><a class="site-nav_catalog-link" href="#">Подкатегория <span class="site-nav_catalog-count">10</span></a></li>
+                          </ul>
+                          <ul class="site-nav_catalog-list">
+                            <li class="site-nav_catalog-item __title"><a class="site-nav_catalog-link" href="#">Категория</a></li>
+                            <li class="site-nav_catalog-item"><a class="site-nav_catalog-link" href="#">Подкатегория <span class="site-nav_catalog-count">10</span></a></li>
+                            <li class="site-nav_catalog-item"><a class="site-nav_catalog-link" href="#">Подкатегория <span class="site-nav_catalog-count">10</span></a></li>
+                            <li class="site-nav_catalog-item"><a class="site-nav_catalog-link" href="#">Подкатегория <span class="site-nav_catalog-count">10</span></a></li>
+                            <li class="site-nav_catalog-item"><a class="site-nav_catalog-link" href="#">Подкатегория <span class="site-nav_catalog-count">10</span></a></li>
+                            <li class="site-nav_catalog-item"><a class="site-nav_catalog-link" href="#">Подкатегория <span class="site-nav_catalog-count">10</span></a></li>
+                            <li class="site-nav_catalog-item"><a class="site-nav_catalog-link" href="#">Подкатегория <span class="site-nav_catalog-count">10</span></a></li>
+                            <li class="site-nav_catalog-item"><a class="site-nav_catalog-link" href="#">Подкатегория <span class="site-nav_catalog-count">10</span></a></li>
+                          </ul>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="site-nav_dropdown-item"><a class="site-nav_dropdown-link" href="#">Крепеж и оснастка</a>
+                      <div class="site-nav_catalog-dropdown"><a class="site-nav_catalog-back" href="#">Назад</a>
+                        <div class="site-nav_catalog-col">
+                          <ul class="site-nav_catalog-list">
+                            <li class="site-nav_catalog-item __title"><a class="site-nav_catalog-link" href="#">Категория</a></li>
+                            <li class="site-nav_catalog-item"><a class="site-nav_catalog-link" href="#">Подкатегория <span class="site-nav_catalog-count">10</span></a></li>
+                            <li class="site-nav_catalog-item"><a class="site-nav_catalog-link" href="#">Подкатегория <span class="site-nav_catalog-count">10</span></a></li>
+                            <li class="site-nav_catalog-item"><a class="site-nav_catalog-link" href="#">Подкатегория <span class="site-nav_catalog-count">10</span></a></li>
+                            <li class="site-nav_catalog-item"><a class="site-nav_catalog-link" href="#">Подкатегория <span class="site-nav_catalog-count">10</span></a></li>
+                          </ul>
+                          <ul class="site-nav_catalog-list">
+                            <li class="site-nav_catalog-item __title"><a class="site-nav_catalog-link" href="#">Категория</a></li>
+                            <li class="site-nav_catalog-item"><a class="site-nav_catalog-link" href="#">Подкатегория <span class="site-nav_catalog-count">10</span></a></li>
+                            <li class="site-nav_catalog-item"><a class="site-nav_catalog-link" href="#">Подкатегория <span class="site-nav_catalog-count">10</span></a></li>
+                          </ul>
+                          <ul class="site-nav_catalog-list">
+                            <li class="site-nav_catalog-item __title"><a class="site-nav_catalog-link" href="#">Категория</a></li>
+                            <li class="site-nav_catalog-item"><a class="site-nav_catalog-link" href="#">Подкатегория <span class="site-nav_catalog-count">10</span></a></li>
+                            <li class="site-nav_catalog-item"><a class="site-nav_catalog-link" href="#">Подкатегория <span class="site-nav_catalog-count">10</span></a></li>
+                            <li class="site-nav_catalog-item"><a class="site-nav_catalog-link" href="#">Подкатегория <span class="site-nav_catalog-count">10</span></a></li>
+                            <li class="site-nav_catalog-item"><a class="site-nav_catalog-link" href="#">Подкатегория <span class="site-nav_catalog-count">10</span></a></li>
+                            <li class="site-nav_catalog-item"><a class="site-nav_catalog-link" href="#">Подкатегория <span class="site-nav_catalog-count">10</span></a></li>
+                            <li class="site-nav_catalog-item"><a class="site-nav_catalog-link" href="#">Подкатегория <span class="site-nav_catalog-count">10</span></a></li>
+                            <li class="site-nav_catalog-item"><a class="site-nav_catalog-link" href="#">Подкатегория <span class="site-nav_catalog-count">10</span></a></li>
+                          </ul>
+                        </div>
+                        <div class="site-nav_catalog-col">
+                          <ul class="site-nav_catalog-list">
+                            <li class="site-nav_catalog-item __title"><a class="site-nav_catalog-link" href="#">Категория</a></li>
+                            <li class="site-nav_catalog-item"><a class="site-nav_catalog-link" href="#">Подкатегория <span class="site-nav_catalog-count">10</span></a></li>
+                            <li class="site-nav_catalog-item"><a class="site-nav_catalog-link" href="#">Подкатегория <span class="site-nav_catalog-count">10</span></a></li>
+                            <li class="site-nav_catalog-item"><a class="site-nav_catalog-link" href="#">Подкатегория <span class="site-nav_catalog-count">10</span></a></li>
+                            <li class="site-nav_catalog-item"><a class="site-nav_catalog-link" href="#">Подкатегория <span class="site-nav_catalog-count">10</span></a></li>
+                          </ul>
+                          <ul class="site-nav_catalog-list">
+                            <li class="site-nav_catalog-item __title"><a class="site-nav_catalog-link" href="#">Категория</a></li>
+                            <li class="site-nav_catalog-item"><a class="site-nav_catalog-link" href="#">Подкатегория <span class="site-nav_catalog-count">10</span></a></li>
+                            <li class="site-nav_catalog-item"><a class="site-nav_catalog-link" href="#">Подкатегория <span class="site-nav_catalog-count">10</span></a></li>
+                          </ul>
+                          <ul class="site-nav_catalog-list">
+                            <li class="site-nav_catalog-item __title"><a class="site-nav_catalog-link" href="#">Категория</a></li>
+                            <li class="site-nav_catalog-item"><a class="site-nav_catalog-link" href="#">Подкатегория <span class="site-nav_catalog-count">10</span></a></li>
+                            <li class="site-nav_catalog-item"><a class="site-nav_catalog-link" href="#">Подкатегория <span class="site-nav_catalog-count">10</span></a></li>
+                            <li class="site-nav_catalog-item"><a class="site-nav_catalog-link" href="#">Подкатегория <span class="site-nav_catalog-count">10</span></a></li>
+                            <li class="site-nav_catalog-item"><a class="site-nav_catalog-link" href="#">Подкатегория <span class="site-nav_catalog-count">10</span></a></li>
+                            <li class="site-nav_catalog-item"><a class="site-nav_catalog-link" href="#">Подкатегория <span class="site-nav_catalog-count">10</span></a></li>
+                            <li class="site-nav_catalog-item"><a class="site-nav_catalog-link" href="#">Подкатегория <span class="site-nav_catalog-count">10</span></a></li>
+                            <li class="site-nav_catalog-item"><a class="site-nav_catalog-link" href="#">Подкатегория <span class="site-nav_catalog-count">10</span></a></li>
+                          </ul>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="site-nav_dropdown-item"><a class="site-nav_dropdown-link" href="#">Инструмент</a>
+                      <div class="site-nav_catalog-dropdown"><a class="site-nav_catalog-back" href="#">Назад</a>
+                        <div class="site-nav_catalog-col">
+                          <ul class="site-nav_catalog-list">
+                            <li class="site-nav_catalog-item __title"><a class="site-nav_catalog-link" href="#">Категория</a></li>
+                            <li class="site-nav_catalog-item"><a class="site-nav_catalog-link" href="#">Подкатегория <span class="site-nav_catalog-count">10</span></a></li>
+                            <li class="site-nav_catalog-item"><a class="site-nav_catalog-link" href="#">Подкатегория <span class="site-nav_catalog-count">10</span></a></li>
+                            <li class="site-nav_catalog-item"><a class="site-nav_catalog-link" href="#">Подкатегория <span class="site-nav_catalog-count">10</span></a></li>
+                            <li class="site-nav_catalog-item"><a class="site-nav_catalog-link" href="#">Подкатегория <span class="site-nav_catalog-count">10</span></a></li>
+                          </ul>
+                          <ul class="site-nav_catalog-list">
+                            <li class="site-nav_catalog-item __title"><a class="site-nav_catalog-link" href="#">Категория</a></li>
+                            <li class="site-nav_catalog-item"><a class="site-nav_catalog-link" href="#">Подкатегория <span class="site-nav_catalog-count">10</span></a></li>
+                            <li class="site-nav_catalog-item"><a class="site-nav_catalog-link" href="#">Подкатегория <span class="site-nav_catalog-count">10</span></a></li>
+                          </ul>
+                          <ul class="site-nav_catalog-list">
+                            <li class="site-nav_catalog-item __title"><a class="site-nav_catalog-link" href="#">Категория</a></li>
+                            <li class="site-nav_catalog-item"><a class="site-nav_catalog-link" href="#">Подкатегория <span class="site-nav_catalog-count">10</span></a></li>
+                            <li class="site-nav_catalog-item"><a class="site-nav_catalog-link" href="#">Подкатегория <span class="site-nav_catalog-count">10</span></a></li>
+                            <li class="site-nav_catalog-item"><a class="site-nav_catalog-link" href="#">Подкатегория <span class="site-nav_catalog-count">10</span></a></li>
+                            <li class="site-nav_catalog-item"><a class="site-nav_catalog-link" href="#">Подкатегория <span class="site-nav_catalog-count">10</span></a></li>
+                            <li class="site-nav_catalog-item"><a class="site-nav_catalog-link" href="#">Подкатегория <span class="site-nav_catalog-count">10</span></a></li>
+                            <li class="site-nav_catalog-item"><a class="site-nav_catalog-link" href="#">Подкатегория <span class="site-nav_catalog-count">10</span></a></li>
+                            <li class="site-nav_catalog-item"><a class="site-nav_catalog-link" href="#">Подкатегория <span class="site-nav_catalog-count">10</span></a></li>
+                          </ul>
+                        </div>
+                        <div class="site-nav_catalog-col">
+                          <ul class="site-nav_catalog-list">
+                            <li class="site-nav_catalog-item __title"><a class="site-nav_catalog-link" href="#">Категория</a></li>
+                            <li class="site-nav_catalog-item"><a class="site-nav_catalog-link" href="#">Подкатегория <span class="site-nav_catalog-count">10</span></a></li>
+                            <li class="site-nav_catalog-item"><a class="site-nav_catalog-link" href="#">Подкатегория <span class="site-nav_catalog-count">10</span></a></li>
+                            <li class="site-nav_catalog-item"><a class="site-nav_catalog-link" href="#">Подкатегория <span class="site-nav_catalog-count">10</span></a></li>
+                            <li class="site-nav_catalog-item"><a class="site-nav_catalog-link" href="#">Подкатегория <span class="site-nav_catalog-count">10</span></a></li>
+                          </ul>
+                          <ul class="site-nav_catalog-list">
+                            <li class="site-nav_catalog-item __title"><a class="site-nav_catalog-link" href="#">Категория</a></li>
+                            <li class="site-nav_catalog-item"><a class="site-nav_catalog-link" href="#">Подкатегория <span class="site-nav_catalog-count">10</span></a></li>
+                            <li class="site-nav_catalog-item"><a class="site-nav_catalog-link" href="#">Подкатегория <span class="site-nav_catalog-count">10</span></a></li>
+                          </ul>
+                          <ul class="site-nav_catalog-list">
+                            <li class="site-nav_catalog-item __title"><a class="site-nav_catalog-link" href="#">Категория</a></li>
+                            <li class="site-nav_catalog-item"><a class="site-nav_catalog-link" href="#">Подкатегория <span class="site-nav_catalog-count">10</span></a></li>
+                            <li class="site-nav_catalog-item"><a class="site-nav_catalog-link" href="#">Подкатегория <span class="site-nav_catalog-count">10</span></a></li>
+                            <li class="site-nav_catalog-item"><a class="site-nav_catalog-link" href="#">Подкатегория <span class="site-nav_catalog-count">10</span></a></li>
+                            <li class="site-nav_catalog-item"><a class="site-nav_catalog-link" href="#">Подкатегория <span class="site-nav_catalog-count">10</span></a></li>
+                            <li class="site-nav_catalog-item"><a class="site-nav_catalog-link" href="#">Подкатегория <span class="site-nav_catalog-count">10</span></a></li>
+                            <li class="site-nav_catalog-item"><a class="site-nav_catalog-link" href="#">Подкатегория <span class="site-nav_catalog-count">10</span></a></li>
+                            <li class="site-nav_catalog-item"><a class="site-nav_catalog-link" href="#">Подкатегория <span class="site-nav_catalog-count">10</span></a></li>
+                          </ul>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="site-nav_dropdown-item"><a class="site-nav_dropdown-link" href="#">Сантехника</a>
+                      <div class="site-nav_catalog-dropdown"><a class="site-nav_catalog-back" href="#">Назад</a>
+                        <div class="site-nav_catalog-col">
+                          <ul class="site-nav_catalog-list">
+                            <li class="site-nav_catalog-item __title"><a class="site-nav_catalog-link" href="#">Категория</a></li>
+                            <li class="site-nav_catalog-item"><a class="site-nav_catalog-link" href="#">Подкатегория <span class="site-nav_catalog-count">10</span></a></li>
+                            <li class="site-nav_catalog-item"><a class="site-nav_catalog-link" href="#">Подкатегория <span class="site-nav_catalog-count">10</span></a></li>
+                            <li class="site-nav_catalog-item"><a class="site-nav_catalog-link" href="#">Подкатегория <span class="site-nav_catalog-count">10</span></a></li>
+                            <li class="site-nav_catalog-item"><a class="site-nav_catalog-link" href="#">Подкатегория <span class="site-nav_catalog-count">10</span></a></li>
+                          </ul>
+                          <ul class="site-nav_catalog-list">
+                            <li class="site-nav_catalog-item __title"><a class="site-nav_catalog-link" href="#">Категория</a></li>
+                            <li class="site-nav_catalog-item"><a class="site-nav_catalog-link" href="#">Подкатегория <span class="site-nav_catalog-count">10</span></a></li>
+                            <li class="site-nav_catalog-item"><a class="site-nav_catalog-link" href="#">Подкатегория <span class="site-nav_catalog-count">10</span></a></li>
+                          </ul>
+                          <ul class="site-nav_catalog-list">
+                            <li class="site-nav_catalog-item __title"><a class="site-nav_catalog-link" href="#">Категория</a></li>
+                            <li class="site-nav_catalog-item"><a class="site-nav_catalog-link" href="#">Подкатегория <span class="site-nav_catalog-count">10</span></a></li>
+                            <li class="site-nav_catalog-item"><a class="site-nav_catalog-link" href="#">Подкатегория <span class="site-nav_catalog-count">10</span></a></li>
+                            <li class="site-nav_catalog-item"><a class="site-nav_catalog-link" href="#">Подкатегория <span class="site-nav_catalog-count">10</span></a></li>
+                            <li class="site-nav_catalog-item"><a class="site-nav_catalog-link" href="#">Подкатегория <span class="site-nav_catalog-count">10</span></a></li>
+                            <li class="site-nav_catalog-item"><a class="site-nav_catalog-link" href="#">Подкатегория <span class="site-nav_catalog-count">10</span></a></li>
+                            <li class="site-nav_catalog-item"><a class="site-nav_catalog-link" href="#">Подкатегория <span class="site-nav_catalog-count">10</span></a></li>
+                            <li class="site-nav_catalog-item"><a class="site-nav_catalog-link" href="#">Подкатегория <span class="site-nav_catalog-count">10</span></a></li>
+                          </ul>
+                        </div>
+                        <div class="site-nav_catalog-col">
+                          <ul class="site-nav_catalog-list">
+                            <li class="site-nav_catalog-item __title"><a class="site-nav_catalog-link" href="#">Категория</a></li>
+                            <li class="site-nav_catalog-item"><a class="site-nav_catalog-link" href="#">Подкатегория <span class="site-nav_catalog-count">10</span></a></li>
+                            <li class="site-nav_catalog-item"><a class="site-nav_catalog-link" href="#">Подкатегория <span class="site-nav_catalog-count">10</span></a></li>
+                            <li class="site-nav_catalog-item"><a class="site-nav_catalog-link" href="#">Подкатегория <span class="site-nav_catalog-count">10</span></a></li>
+                            <li class="site-nav_catalog-item"><a class="site-nav_catalog-link" href="#">Подкатегория <span class="site-nav_catalog-count">10</span></a></li>
+                          </ul>
+                          <ul class="site-nav_catalog-list">
+                            <li class="site-nav_catalog-item __title"><a class="site-nav_catalog-link" href="#">Категория</a></li>
+                            <li class="site-nav_catalog-item"><a class="site-nav_catalog-link" href="#">Подкатегория <span class="site-nav_catalog-count">10</span></a></li>
+                            <li class="site-nav_catalog-item"><a class="site-nav_catalog-link" href="#">Подкатегория <span class="site-nav_catalog-count">10</span></a></li>
+                          </ul>
+                          <ul class="site-nav_catalog-list">
+                            <li class="site-nav_catalog-item __title"><a class="site-nav_catalog-link" href="#">Категория</a></li>
+                            <li class="site-nav_catalog-item"><a class="site-nav_catalog-link" href="#">Подкатегория <span class="site-nav_catalog-count">10</span></a></li>
+                            <li class="site-nav_catalog-item"><a class="site-nav_catalog-link" href="#">Подкатегория <span class="site-nav_catalog-count">10</span></a></li>
+                            <li class="site-nav_catalog-item"><a class="site-nav_catalog-link" href="#">Подкатегория <span class="site-nav_catalog-count">10</span></a></li>
+                            <li class="site-nav_catalog-item"><a class="site-nav_catalog-link" href="#">Подкатегория <span class="site-nav_catalog-count">10</span></a></li>
+                            <li class="site-nav_catalog-item"><a class="site-nav_catalog-link" href="#">Подкатегория <span class="site-nav_catalog-count">10</span></a></li>
+                            <li class="site-nav_catalog-item"><a class="site-nav_catalog-link" href="#">Подкатегория <span class="site-nav_catalog-count">10</span></a></li>
+                            <li class="site-nav_catalog-item"><a class="site-nav_catalog-link" href="#">Подкатегория <span class="site-nav_catalog-count">10</span></a></li>
+                          </ul>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="site-nav_dropdown-item"><a class="site-nav_dropdown-link" href="#">Электроизделия</a>
+                      <div class="site-nav_catalog-dropdown"><a class="site-nav_catalog-back" href="#">Назад</a>
+                        <div class="site-nav_catalog-col">
+                          <ul class="site-nav_catalog-list">
+                            <li class="site-nav_catalog-item __title"><a class="site-nav_catalog-link" href="#">Категория</a></li>
+                            <li class="site-nav_catalog-item"><a class="site-nav_catalog-link" href="#">Подкатегория <span class="site-nav_catalog-count">10</span></a></li>
+                            <li class="site-nav_catalog-item"><a class="site-nav_catalog-link" href="#">Подкатегория <span class="site-nav_catalog-count">10</span></a></li>
+                            <li class="site-nav_catalog-item"><a class="site-nav_catalog-link" href="#">Подкатегория <span class="site-nav_catalog-count">10</span></a></li>
+                            <li class="site-nav_catalog-item"><a class="site-nav_catalog-link" href="#">Подкатегория <span class="site-nav_catalog-count">10</span></a></li>
+                          </ul>
+                          <ul class="site-nav_catalog-list">
+                            <li class="site-nav_catalog-item __title"><a class="site-nav_catalog-link" href="#">Категория</a></li>
+                            <li class="site-nav_catalog-item"><a class="site-nav_catalog-link" href="#">Подкатегория <span class="site-nav_catalog-count">10</span></a></li>
+                            <li class="site-nav_catalog-item"><a class="site-nav_catalog-link" href="#">Подкатегория <span class="site-nav_catalog-count">10</span></a></li>
+                          </ul>
+                          <ul class="site-nav_catalog-list">
+                            <li class="site-nav_catalog-item __title"><a class="site-nav_catalog-link" href="#">Категория</a></li>
+                            <li class="site-nav_catalog-item"><a class="site-nav_catalog-link" href="#">Подкатегория <span class="site-nav_catalog-count">10</span></a></li>
+                            <li class="site-nav_catalog-item"><a class="site-nav_catalog-link" href="#">Подкатегория <span class="site-nav_catalog-count">10</span></a></li>
+                            <li class="site-nav_catalog-item"><a class="site-nav_catalog-link" href="#">Подкатегория <span class="site-nav_catalog-count">10</span></a></li>
+                            <li class="site-nav_catalog-item"><a class="site-nav_catalog-link" href="#">Подкатегория <span class="site-nav_catalog-count">10</span></a></li>
+                            <li class="site-nav_catalog-item"><a class="site-nav_catalog-link" href="#">Подкатегория <span class="site-nav_catalog-count">10</span></a></li>
+                            <li class="site-nav_catalog-item"><a class="site-nav_catalog-link" href="#">Подкатегория <span class="site-nav_catalog-count">10</span></a></li>
+                            <li class="site-nav_catalog-item"><a class="site-nav_catalog-link" href="#">Подкатегория <span class="site-nav_catalog-count">10</span></a></li>
+                          </ul>
+                        </div>
+                        <div class="site-nav_catalog-col">
+                          <ul class="site-nav_catalog-list">
+                            <li class="site-nav_catalog-item __title"><a class="site-nav_catalog-link" href="#">Категория</a></li>
+                            <li class="site-nav_catalog-item"><a class="site-nav_catalog-link" href="#">Подкатегория <span class="site-nav_catalog-count">10</span></a></li>
+                            <li class="site-nav_catalog-item"><a class="site-nav_catalog-link" href="#">Подкатегория <span class="site-nav_catalog-count">10</span></a></li>
+                            <li class="site-nav_catalog-item"><a class="site-nav_catalog-link" href="#">Подкатегория <span class="site-nav_catalog-count">10</span></a></li>
+                            <li class="site-nav_catalog-item"><a class="site-nav_catalog-link" href="#">Подкатегория <span class="site-nav_catalog-count">10</span></a></li>
+                          </ul>
+                          <ul class="site-nav_catalog-list">
+                            <li class="site-nav_catalog-item __title"><a class="site-nav_catalog-link" href="#">Категория</a></li>
+                            <li class="site-nav_catalog-item"><a class="site-nav_catalog-link" href="#">Подкатегория <span class="site-nav_catalog-count">10</span></a></li>
+                            <li class="site-nav_catalog-item"><a class="site-nav_catalog-link" href="#">Подкатегория <span class="site-nav_catalog-count">10</span></a></li>
+                          </ul>
+                          <ul class="site-nav_catalog-list">
+                            <li class="site-nav_catalog-item __title"><a class="site-nav_catalog-link" href="#">Категория</a></li>
+                            <li class="site-nav_catalog-item"><a class="site-nav_catalog-link" href="#">Подкатегория <span class="site-nav_catalog-count">10</span></a></li>
+                            <li class="site-nav_catalog-item"><a class="site-nav_catalog-link" href="#">Подкатегория <span class="site-nav_catalog-count">10</span></a></li>
+                            <li class="site-nav_catalog-item"><a class="site-nav_catalog-link" href="#">Подкатегория <span class="site-nav_catalog-count">10</span></a></li>
+                            <li class="site-nav_catalog-item"><a class="site-nav_catalog-link" href="#">Подкатегория <span class="site-nav_catalog-count">10</span></a></li>
+                            <li class="site-nav_catalog-item"><a class="site-nav_catalog-link" href="#">Подкатегория <span class="site-nav_catalog-count">10</span></a></li>
+                            <li class="site-nav_catalog-item"><a class="site-nav_catalog-link" href="#">Подкатегория <span class="site-nav_catalog-count">10</span></a></li>
+                            <li class="site-nav_catalog-item"><a class="site-nav_catalog-link" href="#">Подкатегория <span class="site-nav_catalog-count">10</span></a></li>
+                          </ul>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="site-nav_dropdown-item"><a class="site-nav_dropdown-link" href="#">Товары для дома</a>
+                      <div class="site-nav_catalog-dropdown"><a class="site-nav_catalog-back" href="#">Назад</a>
+                        <div class="site-nav_catalog-col">
+                          <ul class="site-nav_catalog-list">
+                            <li class="site-nav_catalog-item __title"><a class="site-nav_catalog-link" href="#">Категория</a></li>
+                            <li class="site-nav_catalog-item"><a class="site-nav_catalog-link" href="#">Подкатегория <span class="site-nav_catalog-count">10</span></a></li>
+                            <li class="site-nav_catalog-item"><a class="site-nav_catalog-link" href="#">Подкатегория <span class="site-nav_catalog-count">10</span></a></li>
+                            <li class="site-nav_catalog-item"><a class="site-nav_catalog-link" href="#">Подкатегория <span class="site-nav_catalog-count">10</span></a></li>
+                            <li class="site-nav_catalog-item"><a class="site-nav_catalog-link" href="#">Подкатегория <span class="site-nav_catalog-count">10</span></a></li>
+                          </ul>
+                          <ul class="site-nav_catalog-list">
+                            <li class="site-nav_catalog-item __title"><a class="site-nav_catalog-link" href="#">Категория</a></li>
+                            <li class="site-nav_catalog-item"><a class="site-nav_catalog-link" href="#">Подкатегория <span class="site-nav_catalog-count">10</span></a></li>
+                            <li class="site-nav_catalog-item"><a class="site-nav_catalog-link" href="#">Подкатегория <span class="site-nav_catalog-count">10</span></a></li>
+                          </ul>
+                          <ul class="site-nav_catalog-list">
+                            <li class="site-nav_catalog-item __title"><a class="site-nav_catalog-link" href="#">Категория</a></li>
+                            <li class="site-nav_catalog-item"><a class="site-nav_catalog-link" href="#">Подкатегория <span class="site-nav_catalog-count">10</span></a></li>
+                            <li class="site-nav_catalog-item"><a class="site-nav_catalog-link" href="#">Подкатегория <span class="site-nav_catalog-count">10</span></a></li>
+                            <li class="site-nav_catalog-item"><a class="site-nav_catalog-link" href="#">Подкатегория <span class="site-nav_catalog-count">10</span></a></li>
+                            <li class="site-nav_catalog-item"><a class="site-nav_catalog-link" href="#">Подкатегория <span class="site-nav_catalog-count">10</span></a></li>
+                            <li class="site-nav_catalog-item"><a class="site-nav_catalog-link" href="#">Подкатегория <span class="site-nav_catalog-count">10</span></a></li>
+                            <li class="site-nav_catalog-item"><a class="site-nav_catalog-link" href="#">Подкатегория <span class="site-nav_catalog-count">10</span></a></li>
+                            <li class="site-nav_catalog-item"><a class="site-nav_catalog-link" href="#">Подкатегория <span class="site-nav_catalog-count">10</span></a></li>
+                          </ul>
+                        </div>
+                        <div class="site-nav_catalog-col">
+                          <ul class="site-nav_catalog-list">
+                            <li class="site-nav_catalog-item __title"><a class="site-nav_catalog-link" href="#">Категория</a></li>
+                            <li class="site-nav_catalog-item"><a class="site-nav_catalog-link" href="#">Подкатегория <span class="site-nav_catalog-count">10</span></a></li>
+                            <li class="site-nav_catalog-item"><a class="site-nav_catalog-link" href="#">Подкатегория <span class="site-nav_catalog-count">10</span></a></li>
+                            <li class="site-nav_catalog-item"><a class="site-nav_catalog-link" href="#">Подкатегория <span class="site-nav_catalog-count">10</span></a></li>
+                            <li class="site-nav_catalog-item"><a class="site-nav_catalog-link" href="#">Подкатегория <span class="site-nav_catalog-count">10</span></a></li>
+                          </ul>
+                          <ul class="site-nav_catalog-list">
+                            <li class="site-nav_catalog-item __title"><a class="site-nav_catalog-link" href="#">Категория</a></li>
+                            <li class="site-nav_catalog-item"><a class="site-nav_catalog-link" href="#">Подкатегория <span class="site-nav_catalog-count">10</span></a></li>
+                            <li class="site-nav_catalog-item"><a class="site-nav_catalog-link" href="#">Подкатегория <span class="site-nav_catalog-count">10</span></a></li>
+                          </ul>
+                          <ul class="site-nav_catalog-list">
+                            <li class="site-nav_catalog-item __title"><a class="site-nav_catalog-link" href="#">Категория</a></li>
+                            <li class="site-nav_catalog-item"><a class="site-nav_catalog-link" href="#">Подкатегория <span class="site-nav_catalog-count">10</span></a></li>
+                            <li class="site-nav_catalog-item"><a class="site-nav_catalog-link" href="#">Подкатегория <span class="site-nav_catalog-count">10</span></a></li>
+                            <li class="site-nav_catalog-item"><a class="site-nav_catalog-link" href="#">Подкатегория <span class="site-nav_catalog-count">10</span></a></li>
+                            <li class="site-nav_catalog-item"><a class="site-nav_catalog-link" href="#">Подкатегория <span class="site-nav_catalog-count">10</span></a></li>
+                            <li class="site-nav_catalog-item"><a class="site-nav_catalog-link" href="#">Подкатегория <span class="site-nav_catalog-count">10</span></a></li>
+                            <li class="site-nav_catalog-item"><a class="site-nav_catalog-link" href="#">Подкатегория <span class="site-nav_catalog-count">10</span></a></li>
+                            <li class="site-nav_catalog-item"><a class="site-nav_catalog-link" href="#">Подкатегория <span class="site-nav_catalog-count">10</span></a></li>
+                          </ul>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="site-nav_dropdown-item"><a class="site-nav_dropdown-link" href="#">Сад и огород</a>
+                      <div class="site-nav_catalog-dropdown"><a class="site-nav_catalog-back" href="#">Назад</a>
+                        <div class="site-nav_catalog-col">
+                          <ul class="site-nav_catalog-list">
+                            <li class="site-nav_catalog-item __title"><a class="site-nav_catalog-link" href="#">Категория</a></li>
+                            <li class="site-nav_catalog-item"><a class="site-nav_catalog-link" href="#">Подкатегория <span class="site-nav_catalog-count">10</span></a></li>
+                            <li class="site-nav_catalog-item"><a class="site-nav_catalog-link" href="#">Подкатегория <span class="site-nav_catalog-count">10</span></a></li>
+                            <li class="site-nav_catalog-item"><a class="site-nav_catalog-link" href="#">Подкатегория <span class="site-nav_catalog-count">10</span></a></li>
+                            <li class="site-nav_catalog-item"><a class="site-nav_catalog-link" href="#">Подкатегория <span class="site-nav_catalog-count">10</span></a></li>
+                          </ul>
+                          <ul class="site-nav_catalog-list">
+                            <li class="site-nav_catalog-item __title"><a class="site-nav_catalog-link" href="#">Категория</a></li>
+                            <li class="site-nav_catalog-item"><a class="site-nav_catalog-link" href="#">Подкатегория <span class="site-nav_catalog-count">10</span></a></li>
+                            <li class="site-nav_catalog-item"><a class="site-nav_catalog-link" href="#">Подкатегория <span class="site-nav_catalog-count">10</span></a></li>
+                          </ul>
+                          <ul class="site-nav_catalog-list">
+                            <li class="site-nav_catalog-item __title"><a class="site-nav_catalog-link" href="#">Категория</a></li>
+                            <li class="site-nav_catalog-item"><a class="site-nav_catalog-link" href="#">Подкатегория <span class="site-nav_catalog-count">10</span></a></li>
+                            <li class="site-nav_catalog-item"><a class="site-nav_catalog-link" href="#">Подкатегория <span class="site-nav_catalog-count">10</span></a></li>
+                            <li class="site-nav_catalog-item"><a class="site-nav_catalog-link" href="#">Подкатегория <span class="site-nav_catalog-count">10</span></a></li>
+                            <li class="site-nav_catalog-item"><a class="site-nav_catalog-link" href="#">Подкатегория <span class="site-nav_catalog-count">10</span></a></li>
+                            <li class="site-nav_catalog-item"><a class="site-nav_catalog-link" href="#">Подкатегория <span class="site-nav_catalog-count">10</span></a></li>
+                            <li class="site-nav_catalog-item"><a class="site-nav_catalog-link" href="#">Подкатегория <span class="site-nav_catalog-count">10</span></a></li>
+                            <li class="site-nav_catalog-item"><a class="site-nav_catalog-link" href="#">Подкатегория <span class="site-nav_catalog-count">10</span></a></li>
+                          </ul>
+                        </div>
+                        <div class="site-nav_catalog-col">
+                          <ul class="site-nav_catalog-list">
+                            <li class="site-nav_catalog-item __title"><a class="site-nav_catalog-link" href="#">Категория</a></li>
+                            <li class="site-nav_catalog-item"><a class="site-nav_catalog-link" href="#">Подкатегория <span class="site-nav_catalog-count">10</span></a></li>
+                            <li class="site-nav_catalog-item"><a class="site-nav_catalog-link" href="#">Подкатегория <span class="site-nav_catalog-count">10</span></a></li>
+                            <li class="site-nav_catalog-item"><a class="site-nav_catalog-link" href="#">Подкатегория <span class="site-nav_catalog-count">10</span></a></li>
+                            <li class="site-nav_catalog-item"><a class="site-nav_catalog-link" href="#">Подкатегория <span class="site-nav_catalog-count">10</span></a></li>
+                          </ul>
+                          <ul class="site-nav_catalog-list">
+                            <li class="site-nav_catalog-item __title"><a class="site-nav_catalog-link" href="#">Категория</a></li>
+                            <li class="site-nav_catalog-item"><a class="site-nav_catalog-link" href="#">Подкатегория <span class="site-nav_catalog-count">10</span></a></li>
+                            <li class="site-nav_catalog-item"><a class="site-nav_catalog-link" href="#">Подкатегория <span class="site-nav_catalog-count">10</span></a></li>
+                          </ul>
+                          <ul class="site-nav_catalog-list">
+                            <li class="site-nav_catalog-item __title"><a class="site-nav_catalog-link" href="#">Категория</a></li>
+                            <li class="site-nav_catalog-item"><a class="site-nav_catalog-link" href="#">Подкатегория <span class="site-nav_catalog-count">10</span></a></li>
+                            <li class="site-nav_catalog-item"><a class="site-nav_catalog-link" href="#">Подкатегория <span class="site-nav_catalog-count">10</span></a></li>
+                            <li class="site-nav_catalog-item"><a class="site-nav_catalog-link" href="#">Подкатегория <span class="site-nav_catalog-count">10</span></a></li>
+                            <li class="site-nav_catalog-item"><a class="site-nav_catalog-link" href="#">Подкатегория <span class="site-nav_catalog-count">10</span></a></li>
+                            <li class="site-nav_catalog-item"><a class="site-nav_catalog-link" href="#">Подкатегория <span class="site-nav_catalog-count">10</span></a></li>
+                            <li class="site-nav_catalog-item"><a class="site-nav_catalog-link" href="#">Подкатегория <span class="site-nav_catalog-count">10</span></a></li>
+                            <li class="site-nav_catalog-item"><a class="site-nav_catalog-link" href="#">Подкатегория <span class="site-nav_catalog-count">10</span></a></li>
+                          </ul>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="site-nav_dropdown-item"><a class="site-nav_dropdown-link" href="#">Разное</a>
+                      <div class="site-nav_catalog-dropdown"><a class="site-nav_catalog-back" href="#">Назад</a>
+                        <div class="site-nav_catalog-col">
+                          <ul class="site-nav_catalog-list">
+                            <li class="site-nav_catalog-item __title"><a class="site-nav_catalog-link" href="#">Категория</a></li>
+                            <li class="site-nav_catalog-item"><a class="site-nav_catalog-link" href="#">Подкатегория <span class="site-nav_catalog-count">10</span></a></li>
+                            <li class="site-nav_catalog-item"><a class="site-nav_catalog-link" href="#">Подкатегория <span class="site-nav_catalog-count">10</span></a></li>
+                            <li class="site-nav_catalog-item"><a class="site-nav_catalog-link" href="#">Подкатегория <span class="site-nav_catalog-count">10</span></a></li>
+                            <li class="site-nav_catalog-item"><a class="site-nav_catalog-link" href="#">Подкатегория <span class="site-nav_catalog-count">10</span></a></li>
+                          </ul>
+                          <ul class="site-nav_catalog-list">
+                            <li class="site-nav_catalog-item __title"><a class="site-nav_catalog-link" href="#">Категория</a></li>
+                            <li class="site-nav_catalog-item"><a class="site-nav_catalog-link" href="#">Подкатегория <span class="site-nav_catalog-count">10</span></a></li>
+                            <li class="site-nav_catalog-item"><a class="site-nav_catalog-link" href="#">Подкатегория <span class="site-nav_catalog-count">10</span></a></li>
+                          </ul>
+                          <ul class="site-nav_catalog-list">
+                            <li class="site-nav_catalog-item __title"><a class="site-nav_catalog-link" href="#">Категория</a></li>
+                            <li class="site-nav_catalog-item"><a class="site-nav_catalog-link" href="#">Подкатегория <span class="site-nav_catalog-count">10</span></a></li>
+                            <li class="site-nav_catalog-item"><a class="site-nav_catalog-link" href="#">Подкатегория <span class="site-nav_catalog-count">10</span></a></li>
+                            <li class="site-nav_catalog-item"><a class="site-nav_catalog-link" href="#">Подкатегория <span class="site-nav_catalog-count">10</span></a></li>
+                            <li class="site-nav_catalog-item"><a class="site-nav_catalog-link" href="#">Подкатегория <span class="site-nav_catalog-count">10</span></a></li>
+                            <li class="site-nav_catalog-item"><a class="site-nav_catalog-link" href="#">Подкатегория <span class="site-nav_catalog-count">10</span></a></li>
+                            <li class="site-nav_catalog-item"><a class="site-nav_catalog-link" href="#">Подкатегория <span class="site-nav_catalog-count">10</span></a></li>
+                            <li class="site-nav_catalog-item"><a class="site-nav_catalog-link" href="#">Подкатегория <span class="site-nav_catalog-count">10</span></a></li>
+                          </ul>
+                        </div>
+                        <div class="site-nav_catalog-col">
+                          <ul class="site-nav_catalog-list">
+                            <li class="site-nav_catalog-item __title"><a class="site-nav_catalog-link" href="#">Категория</a></li>
+                            <li class="site-nav_catalog-item"><a class="site-nav_catalog-link" href="#">Подкатегория <span class="site-nav_catalog-count">10</span></a></li>
+                            <li class="site-nav_catalog-item"><a class="site-nav_catalog-link" href="#">Подкатегория <span class="site-nav_catalog-count">10</span></a></li>
+                            <li class="site-nav_catalog-item"><a class="site-nav_catalog-link" href="#">Подкатегория <span class="site-nav_catalog-count">10</span></a></li>
+                            <li class="site-nav_catalog-item"><a class="site-nav_catalog-link" href="#">Подкатегория <span class="site-nav_catalog-count">10</span></a></li>
+                          </ul>
+                          <ul class="site-nav_catalog-list">
+                            <li class="site-nav_catalog-item __title"><a class="site-nav_catalog-link" href="#">Категория</a></li>
+                            <li class="site-nav_catalog-item"><a class="site-nav_catalog-link" href="#">Подкатегория <span class="site-nav_catalog-count">10</span></a></li>
+                            <li class="site-nav_catalog-item"><a class="site-nav_catalog-link" href="#">Подкатегория <span class="site-nav_catalog-count">10</span></a></li>
+                          </ul>
+                          <ul class="site-nav_catalog-list">
+                            <li class="site-nav_catalog-item __title"><a class="site-nav_catalog-link" href="#">Категория</a></li>
+                            <li class="site-nav_catalog-item"><a class="site-nav_catalog-link" href="#">Подкатегория <span class="site-nav_catalog-count">10</span></a></li>
+                            <li class="site-nav_catalog-item"><a class="site-nav_catalog-link" href="#">Подкатегория <span class="site-nav_catalog-count">10</span></a></li>
+                            <li class="site-nav_catalog-item"><a class="site-nav_catalog-link" href="#">Подкатегория <span class="site-nav_catalog-count">10</span></a></li>
+                            <li class="site-nav_catalog-item"><a class="site-nav_catalog-link" href="#">Подкатегория <span class="site-nav_catalog-count">10</span></a></li>
+                            <li class="site-nav_catalog-item"><a class="site-nav_catalog-link" href="#">Подкатегория <span class="site-nav_catalog-count">10</span></a></li>
+                            <li class="site-nav_catalog-item"><a class="site-nav_catalog-link" href="#">Подкатегория <span class="site-nav_catalog-count">10</span></a></li>
+                            <li class="site-nav_catalog-item"><a class="site-nav_catalog-link" href="#">Подкатегория <span class="site-nav_catalog-count">10</span></a></li>
+                          </ul>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </li>
+                <li class="site-nav_item"><a class="site-nav_link" href="#">Новинки</a></li>
+                <li class="site-nav_item"><a class="site-nav_link" href="#">Акции</a></li>
+                <li class="site-nav_item"><a class="site-nav_link" href="#">Главная</a></li>
+                <li class="site-nav_item"><a class="site-nav_link" href="#">Компания</a></li>
+                <li class="site-nav_item"><a class="site-nav_link" href="#">Адреса магазинов</a></li>
+              </ul>
+            </nav>
+          </div>
+          <ul class="site-header_contacts">
+            <li class="site-header_contact"><span>Контактный телефон</span><a href="#">8 3424 20 20 80</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="site-header_overlay"></div>
+    </header>
+    <main>
+      <div class="l-wrapper page-content">
+        <ul class="breadcrumbs">
+          <li class="breadcrumbs_item"><a class="breadcrumbs_link" href="#">Главная</a></li>
+          <li class="breadcrumbs_item"><a class="breadcrumbs_link" href="#">Личный кабинет</a></li>
+        </ul>
+        <div class="page-header">
+          <h1 class="page-header_title">Личный кабинет</h1>
+        </div>
+        <div class="cabinet">
+          <div class="cabinet_menu">
+            <ul class="cabinet_menu-list">
+              <li class="cabinet_menu-item"><a class="cabinet_menu-link" href="cabinet_1.html">
+                    <svg class="icon icon-address-card ">
+                      <use xlink:href="media/img/sprite.svg#address-card"></use>
+                    </svg>Личные данные</a></li>
+              <li class="cabinet_menu-item"><a class="cabinet_menu-link" href="cabinet_2.html">
+                    <svg class="icon icon-map ">
+                      <use xlink:href="media/img/sprite.svg#map"></use>
+                    </svg>Адрес доставки</a></li>
+              <li class="cabinet_menu-item"><a class="cabinet_menu-link __is-active" href="cabinet_3.html">
+                    <svg class="icon icon-box ">
+                      <use xlink:href="media/img/sprite.svg#box"></use>
+                    </svg>История заказов</a></li>
+              <li class="cabinet_menu-item"><a class="cabinet_menu-link" href="#">
+                    <svg class="icon icon-sign-out ">
+                      <use xlink:href="media/img/sprite.svg#sign-out"></use>
+                    </svg>Выход</a></li>
+            </ul>
+          </div>
+          <div class="cabinet_content"><b class="cabinet_title">Адрес доставки</b>
+            <ul class="order-history">
+              <li class="order-history_item">
+                <div class="order-card">
+                  <div class="order-card_header">
+                    <time class="order-card_date" datetime="2018-09-24">24 сентября 2018</time><span class="order-card_status">Обработка
+                        <svg class="icon icon-clock ">
+                          <use xlink:href="media/img/sprite.svg#clock"></use>
+                        </svg></span>
+                  </div>
+                  <div class="order-card_content">
+                    <div class="order-card_col">
+                      <div class="oreder-card_row __bold"><b>Заказ № 123456</b></div>
+                      <div class="oreder-card_row"><span>Доставка курьером</span></div>
+                    </div>
+                    <div class="order-card_col">
+                      <div class="oreder-card_row __bold"><b class="order-card_pieces">6 товаров</b><b class="order-card_price">12 800 <span class="order-card_price-symb">₽</span></b></div>
+                      <div class="oreder-card_row"><span>Оплата наличными</span></div>
+                    </div>
+                    <div class="order-card_col"><a class="btn __light-grey" href="#">Детали заказа</a></div>
+                  </div>
+                </div>
+              </li>
+              <li class="order-history_item">
+                <div class="order-card">
+                  <div class="order-card_header">
+                    <time class="order-card_date" datetime="2018-09-24">24 сентября 2018</time><span class="order-card_status">Выполнен
+                        <svg class="icon icon-check-circle ">
+                          <use xlink:href="media/img/sprite.svg#check-circle"></use>
+                        </svg></span>
+                  </div>
+                  <div class="order-card_content">
+                    <div class="order-card_col">
+                      <div class="oreder-card_row __bold"><b>Заказ № 123456</b></div>
+                      <div class="oreder-card_row"><span>Доставка курьером</span></div>
+                    </div>
+                    <div class="order-card_col">
+                      <div class="oreder-card_row __bold"><b class="order-card_pieces">6 товаров</b><b class="order-card_price">12 800 <span class="order-card_price-symb">₽</span></b></div>
+                      <div class="oreder-card_row"><span>Оплата наличными</span></div>
+                    </div>
+                    <div class="order-card_col"><a class="btn __light-grey" href="#">Детали заказа</a></div>
+                  </div>
+                </div>
+              </li>
+              <li class="order-history_item">
+                <div class="order-card">
+                  <div class="order-card_header">
+                    <time class="order-card_date" datetime="2018-09-24">24 сентября 2018</time><span class="order-card_status">Отменен
+                        <svg class="icon icon-times-circle ">
+                          <use xlink:href="media/img/sprite.svg#times-circle"></use>
+                        </svg></span>
+                  </div>
+                  <div class="order-card_content">
+                    <div class="order-card_col">
+                      <div class="oreder-card_row __bold"><b>Заказ № 123456</b></div>
+                      <div class="oreder-card_row"><span>Доставка курьером</span></div>
+                    </div>
+                    <div class="order-card_col">
+                      <div class="oreder-card_row __bold"><b class="order-card_pieces">6 товаров</b><b class="order-card_price">12 800 <span class="order-card_price-symb">₽</span></b></div>
+                      <div class="oreder-card_row"><span>Оплата наличными</span></div>
+                    </div>
+                    <div class="order-card_col"><a class="btn __light-grey" href="#">Детали заказа</a></div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer class="site-foo">
+      <div class="l-wrapper site-foo_first">
+        <nav class="site-foo_nav">
+          <ul class="site-foo_nav-list">
+            <li class="site-foo_nav-title">Покупателям</li>
+            <li class="site-foo_nav-item"><a class="site-foo_nav-link" href="#">Преимущества регистрации</a></li>
+            <li class="site-foo_nav-item"><a class="site-foo_nav-link" href="#">Как сделать заказ</a></li>
+            <li class="site-foo_nav-item"><a class="site-foo_nav-link" href="#">Оплата</a></li>
+            <li class="site-foo_nav-item"><a class="site-foo_nav-link" href="#">Доставка и самовывоз</a></li>
+            <li class="site-foo_nav-item"><a class="site-foo_nav-link" href="#">Возврат товара</a></li>
+            <li class="site-foo_nav-item"><a class="site-foo_nav-link" href="#">Дисконтные карты</a></li>
+          </ul>
+          <ul class="site-foo_nav-list">
+            <li class="site-foo_nav-title">Компания</li>
+            <li class="site-foo_nav-item"><a class="site-foo_nav-link" href="#">Компания</a></li>
+            <li class="site-foo_nav-item"><a class="site-foo_nav-link" href="#">Реквизиты</a></li>
+            <li class="site-foo_nav-item"><a class="site-foo_nav-link" href="#">Вакансии</a></li>
+          </ul>
+          <ul class="site-foo_nav-list">
+            <li class="site-foo_nav-title">Прочее</li>
+            <li class="site-foo_nav-item"><a class="site-foo_nav-link" href="#">Магазин на Яндекс.Маркет</a></li>
+            <li class="site-foo_nav-item"><a class="site-foo_nav-link" href="#">Магазин на Авито</a></li>
+          </ul>
+        </nav>
+        <ul class="site-foo_info">
+          <li class="site-foo_info-title">Торговая сеть «Мастер»</li>
+          <li class="site-foo_info-tel"><a href="#">+7 (3424) 20-20-80</a></li>
+          <li class="site-foo_info-addres">Березники, ул. Карла Маркса, 124</li>
+          <li class="site-foo_info-timetable">
+            <ul>
+              <li>пн - пт: 09:00 – 19:00</li>
+              <li>сб - вс: 10:00 – 18:00</li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <div class="l-wrapper site-foo_second">
+        <div class="site-foo_copyright">© ИП Опарина Ю.Г. (Торговая сеть «Мастер»), 2016-2018</div>
+        <div class="site-foo_site-developer">Разработка сайта <a href="#">Простор дизайн</a></div>
+      </div>
+    </footer>
+    <div class="modal">
+      <div class="modal_container" id="login">
+        <div class="modal_content">
+          <div class="modal_header"><b class="modal_title">Вход на сайт</b></div>
+          <form class="form" action="#" method="post">
+            <div class="form_tf-wrapper">
+              <input class="form_tf" type="email" name="login" placeholder="Электронная почта"/>
+            </div>
+            <div class="form_tf-wrapper">
+              <input class="form_tf" type="password" name="pass" placeholder="Пароль"/>
+            </div>
+            <div class="form_actions">
+              <button class="btn" type="submit">Войти</button><a class="btn __light-blue mopen" href="#register">Регистрация</a>
+            </div>
+            <div class="form_actions __pass-remind"><span>Забыли пароль? </span><a class="mopen" href="#pass-remind">Восстановить</a></div>
+          </form>
+        </div><a class="modal_close" href="#"></a>
+      </div>
+      <div class="modal_overlay"></div>
+    </div>
+    <div class="modal">
+      <div class="modal_container" id="pass-remind">
+        <div class="modal_content">
+          <div class="modal_header"><b class="modal_title">Восстановление пароля</b></div>
+          <p class="modal_text">
+            Введите e-mail, который указывали при регистрации
+            
+          </p>
+          <form class="form" action="#" method="post">
+            <div class="form_tf-wrapper">
+              <input class="form_tf" type="email" name="login" placeholder="Электронная почта"/>
+            </div>
+            <div class="form_actions">
+              <button class="btn" type="submit">Вспомнить пароль</button>
+            </div>
+            <div class="form_actions __pass-remind"><span>Вспомнили пароль? </span><a href="#login">Отмена</a></div>
+          </form>
+        </div><a class="modal_close" href="#"></a>
+      </div>
+      <div class="modal_overlay"></div>
+    </div>
+    <div class="modal">
+      <div class="modal_container" id="register">
+        <div class="modal_content">
+          <div class="modal_header"><b class="modal_title">Восстановление пароля</b></div>
+          <p class="modal_text">
+            После регистрации на сайте вам будет доступен 
+            личный кабинет, возможность отслеживать состояние 
+            заказов, история покупок и другие новые возможности
+            
+          </p>
+          <form class="form" action="#" method="post">
+            <div class="form_tf-wrapper">
+              <input class="form_tf" type="text" name="name" placeholder="Ваше имя"/>
+            </div>
+            <div class="form_tf-wrapper">
+              <input class="form_tf" type="email" name="email" placeholder="Электронная почта"/>
+            </div>
+            <div class="form_tf-wrapper">
+              <input class="form_tf" type="tel" name="tel" placeholder="Номер телефона"/>
+            </div>
+            <div class="form_tf-wrapper">
+              <input class="form_tf" type="password" name="pass" placeholder="Пароль"/>
+            </div>
+            <div class="form_tf-wrapper">
+              <input class="form_tf" type="password" name="pass-repeat" placeholder="Подтверждение пароля"/>
+            </div>
+            <div class="form_tf-wrapper __capcha">
+              <input class="form_tf" type="text" name="name" placeholder="Код с картинки"/>
+              <div class="form_capcha">
+                <div class="capcha">
+                  <div class="capcha_img"><img src="media/img-p/placeholder-220x220.jpg" alt=""/></div>
+                  <div class="capcha_reload"><a class="capcha_reload-btn" href="#">
+                        <svg class="icon icon-sync ">
+                          <use xlink:href="media/img/sprite.svg#sync"></use>
+                        </svg></a></div>
+                </div>
+              </div>
+            </div>
+            <div class="form_checkbox-wrp">
+              <input class="form_checkbox" type="checkbox" name="privacy" id="privacy"/>
+              <label class="form_checkbox-label" for="privacy">Согласен с <a href="#">политикой конфиденциальности</a></label>
+            </div>
+            <div class="form_actions">
+              <button class="btn" type="submit">Зарегистрироваться</button>
+            </div>
+            <div class="form_actions __pass-remind"><span>Уже есть аккаунт? </span><a href="#login">Войти</a></div>
+          </form>
+        </div><a class="modal_close" href="#"></a>
+      </div>
+      <div class="modal_overlay"></div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.js"></script>
+    <script src="js/libs/modal.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,66 @@
+.breadcrumbs
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	list-style: none
+	margin: 0
+	padding: 0
+	color: #aaaaaa
+	font-size: .777rem
+	line-height: 1
+	padding-top: 20px
+	padding-bottom: 20px
+
+.breadcrumbs_item
+	padding-right: 20px
+	margin-right: 12px
+	position: relative
+
+	&::before
+		content: ""
+		display: block
+		width: 8px
+		height: 1px
+		position: absolute
+		top: 50%
+		right: 0
+		background-color: #aaa
+
+	&:last-child
+		padding-right: 0
+		margin-right: 0
+
+	&:last-child::before
+		display: none
+
+.breadcrumbs_link
+	color: inherit
+	text-decoration: none
+
+	&:hover
+		opacity: .8
+
+@media screen and (max-width: 1040px)
+	.breadcrumbs
+		padding-top: 15px
+		padding-bottom: 15px
+
+	.breadcrumbs_item:not(:last-child)
+		display: none
+	
+	.breadcrumbs_link
+		position: relative
+		padding-left: 15px
+
+		&::after
+			content: ""
+			width: 7px
+			height: 7px
+			border-bottom: 1px solid #aaa
+			border-left: 1px solid #aaa
+			position: absolute
+			top: 4px
+			left: 0
+			transform: rotate(45deg)

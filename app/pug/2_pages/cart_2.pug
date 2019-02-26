@@ -1,0 +1,75 @@
+extends ../0_base/template
+
+block title
+	title Корзина
+
+block content
+	.l-wrapper.page-content
+		ul.breadcrumbs
+			li.breadcrumbs_item: a(href="#").breadcrumbs_link Главная
+			li.breadcrumbs_item: a(href="#").breadcrumbs_link Корзина
+
+		.page-header
+			h1.page-header_title Доставка и оплата
+
+		.cart
+			form(action="#" method="post").form
+				.form_section-title
+					b Выберите способ доставки:
+
+				.delivery
+					.delivery_item
+						input(type="radio" name="delivery" id="delivery-self" checked).delivery_item-radio
+						label(for="delivery-self").delivery_item-label
+							i.delivery_item-icon
+								+icon('box')
+							b.delivery_item-title.
+								Самовывоз
+							p.delivery_item-text.
+								Удобный, бесплатный и быстрый способ получения заказа. Вы можете 
+								забрать товар в сети наших магазинов.
+							b.delivery_price 0 <span>₽</span>
+					.delivery_item
+						input(type="radio" name="delivery" id="delivery-courier").delivery_item-radio
+						label(for="delivery-courier").delivery_item-label
+							i.delivery_item-icon
+								+icon('truck')
+							b.delivery_item-title.
+								Курьерская доставка
+							p.delivery_item-text.
+								Курьерская доставка осуществляется на следующий день после 
+								оформления заказа, если товар есть в наличии. Курьерская доставка 
+								осуществляется в пределах города, ежедневно с 10.00 до 21.00. Заказ на 
+								сумму свыше 1000 рублей доставляется бесплатно.
+							b.delivery_price 200 <span>₽</span>
+
+				.form_section-title
+					b Выберите способ оплаты:
+
+				.payment
+					.payment_item
+						input(type="radio" name="payment" id="payment-self" checked).payment_radio
+						label(for="payment-self").payment_label
+							i.payment_item-icon
+								+icon('money-bill-wave-alt')
+							b.payment_title.
+								Наличными при получении товара
+							p.payment_text.
+								Мы свяжемся с вами для уточнения всех 
+								деталей заказа. Оплата производится после 
+								получения товара.
+					.payment_item
+						input(type="radio" name="payment" id="payment-courier").payment_radio
+						label(for="payment-courier").payment_label
+							i.payment_item-icon
+								+icon('credit-card')
+							b.payment_title.
+								Оплата банковской картой
+							p.payment_text.
+								Оплата производится через Сбербанк, вы 
+								будете перенаправлены на сервис оплаты 
+								банка.
+
+			.cart_actions
+				a(href="#").btn.__light-blue.__big Назад
+				a(href="#").btn.__big Оформить заказ

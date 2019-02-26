@@ -1,0 +1,45 @@
+header.site-header
+	.site-header_first
+		.l-wrapper.site-header_row
+			a(href=isIndex ? "#" : "index.html").site-header_logo
+				img(src="media/img/site-logo.png", alt="Логотип сайта")
+
+			ul.site-header_contacts
+				li.site-header_contact
+					span Контактный телефон
+					a(href="#") 8 3424 20 20 80
+
+			.site-header_search
+				form(action="#" method="get").search-form
+					input(type="text" name="search" placeholder="Поиск в магазине").search-form_input
+					button(type="submit").search-form_btn: +icon("search")
+
+			.site-header_user-block
+				.user-block
+					a(href="#login").user-block_item.mopen
+						i.user-block_item-ic: +icon('user')
+						|Вход
+					a(href="cart_1.html").user-block_item.__cart
+						i.user-block_item-ic
+							+icon('shopping-cart')
+							span.user-block_cart-counter 2
+						|Корзина
+					a(href="#").user-block_item.__m-menu.js-m-menu-open
+						i.user-block_item-ic: +icon('bars')
+	
+	.site-header_second.m-menu.js-m-menu
+		.l-wrapper
+			.site-header_search
+				form(action="#" method="get").search-form
+					input(type="text" name="search" placeholder="Поиск в магазине").search-form_input
+					button(type="submit").search-form_btn: +icon("search")
+
+			.site-header_menu
+				include site-nav
+
+			ul.site-header_contacts
+				li.site-header_contact
+					span Контактный телефон
+					a(href="#") 8 3424 20 20 80
+	
+	.site-header_overlay

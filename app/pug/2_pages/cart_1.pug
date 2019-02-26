@@ -1,0 +1,116 @@
+extends ../0_base/template
+
+block title
+	title Корзина
+
+block content
+	.l-wrapper.page-content
+		ul.breadcrumbs
+			li.breadcrumbs_item: a(href="#").breadcrumbs_link Главная
+			li.breadcrumbs_item: a(href="#").breadcrumbs_link Корзина
+
+		.page-header
+			h1.page-header_title Корзина
+
+		.cart
+			ul.cart_item-list
+				li.cart_item
+					.cart-card
+						.cart-card_img
+							img(src="media/img-p/placeholder-220x220.jpg", alt="")
+						.cart-card_content
+							.cart-card_info
+								a(href="#").cart-card_category Радиаторы отопительные
+								a(href="#").cart-card_name Радиатор отопительный Royal Thermo Revolution Bimetall 12 секций (биметалл)
+								span.cart-card_code Код 015546
+							.cart-card_spinner
+								.spinner.js-spinner
+									button(type="button").spinner_btn.__dec
+									input(type="text" value="1" disabled).spinner_vp
+									button(type="button").spinner_btn.__inc
+							.cart-card_totals
+								.cart-card_price
+									span.cart-card_price-num 240 
+									span.cart-card_price-symbol ₽
+								.cart-card_price-per-piece 240 <span class="cart-card_price-symbol">₽/шт</span>
+							.cart-card_actions
+								a(href="#").cart-card_delite: +icon('trash-alt')
+				li.cart_item
+					.cart-card
+						.cart-card_img
+							img(src="media/img-p/placeholder-220x220.jpg", alt="")
+						.cart-card_content
+							.cart-card_info
+								a(href="#").cart-card_category Радиаторы отопительные
+								a(href="#").cart-card_name Радиатор отопительный Royal Thermo Revolution Bimetall 12 секций (биметалл)
+								span.cart-card_code Код 015546
+							.cart-card_spinner
+								.spinner.js-spinner
+									button(type="button").spinner_btn.__dec
+									input(type="text" value="1" disabled).spinner_vp
+									button(type="button").spinner_btn.__inc
+							.cart-card_totals
+								.cart-card_price
+									span.cart-card_price-num 240 
+									span.cart-card_price-symbol ₽
+								.cart-card_price-per-piece 240 <span class="cart-card_price-symbol">₽/шт</span>
+							.cart-card_actions
+								a(href="#").cart-card_delite: +icon('trash-alt')
+				li.cart_item
+					.cart-card
+						.cart-card_img
+							img(src="media/img-p/placeholder-220x220.jpg", alt="")
+						.cart-card_content
+							.cart-card_info
+								a(href="#").cart-card_category Радиаторы отопительные
+								a(href="#").cart-card_name Радиатор отопительный Royal Thermo Revolution Bimetall 12 секций (биметалл)
+								span.cart-card_code Код 015546
+							.cart-card_spinner
+								.spinner.js-spinner
+									button(type="button").spinner_btn.__dec
+									input(type="text" value="1" disabled).spinner_vp
+									button(type="button").spinner_btn.__inc
+							.cart-card_totals
+								.cart-card_price
+									span.cart-card_price-num 240 
+									span.cart-card_price-symbol ₽
+								.cart-card_price-per-piece 240 <span class="cart-card_price-symbol">₽/шт</span>
+							.cart-card_actions
+								a(href="#").cart-card_delite: +icon('trash-alt')
+
+			.cart_checkout.__pt-30
+				.cart_checkout-row
+					.cart_promocode
+						form(action="#" method="post").promocode
+							input(type="text" name="promocode" placeholder="Промокод на скидку").form_tf.promocode_input
+							button(type="submit").btn.promocode_submit Применить
+
+					ul.cart_totals.__content-width
+						li.cart_totals-item
+							.cart_totals-text
+								b Общая сумма
+								span без учета доставки
+							.cart_totals-count
+								b 8 729
+								span ₽
+
+			.cart_actions
+				a(href="#").btn.__light-blue.__big Продолжить покупки
+				a(href="#").btn.__big Оформить заказ
+
+		.index-section
+			.index-section_header
+				h2.index-section_title Похожие товары
+				.index-section_carousel-controls
+					.carousel-nav.js-carousel-nav
+						a(href="#").carousel-nav_btn.__prev: +icon('nav-prev')
+						a(href="#").carousel-nav_btn.__next: +icon('nav-next')
+
+			.index-section_content.owl-carousel.owl-theme.js-items-carousel
+				+card()
+				+card()
+				+card()
+				+card()
+				+card()
+				+card()
+				+card()

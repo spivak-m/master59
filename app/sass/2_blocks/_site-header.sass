@@ -1,0 +1,86 @@
+.site-header
+	width: 100%
+
+.site-header_first
+	width: 100%
+	padding-top: 15px
+	padding-bottom: 15px
+
+.site-header_second
+	background-color: $blue
+
+.site-header_row
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	align-items: center
+	justify-content: space-between
+
+.site-header_logo
+	width: 141px
+	line-height: 0
+	flex-shrink: 0
+
+.site-header_contacts
+	list-style: none
+	margin: 0
+	padding: 0
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+
+.site-header_contact
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	flex-direction: column
+	align-items: flex-start
+	font-size: .666rem
+	color: #888
+
+	a
+		font-size: 1rem
+		color: $blue
+		text-decoration: none
+
+.site-header_search
+	width: 410px
+
+.site-header_overlay
+	position: fixed
+	top: 0
+	bottom: 0
+	left: 0
+	right: 0
+	background-color: rgba(0,0,0, 0)
+	z-index: 650
+	visibility: hidden
+	transition: .2s
+
+	&.__is-show
+		visibility: visible
+		background-color: rgba(0,0,0, .5)
+
+@media screen and (max-width: 1040px)
+	.site-header
+		border-bottom: 1px solid #cecece
+
+	.site-header_logo
+		width: 84px
+
+	.site-header_contacts
+		display: none
+
+	.site-header_search
+		display: none
+
+	.site-header_first
+		position: relative
+		z-index: 653
+		background-color: #fff

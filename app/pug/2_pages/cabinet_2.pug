@@ -1,0 +1,48 @@
+extends ../0_base/template
+
+block title
+	title Личный кабинет
+
+block content
+	.l-wrapper.page-content
+		ul.breadcrumbs
+			li.breadcrumbs_item: a(href="#").breadcrumbs_link Главная
+			li.breadcrumbs_item: a(href="#").breadcrumbs_link Личный кабинет
+
+		.page-header
+			h1.page-header_title Личный кабинет
+
+		.cabinet
+			.cabinet_menu
+				ul.cabinet_menu-list
+					li.cabinet_menu-item: a(href="cabinet_1.html").cabinet_menu-link
+						+icon('address-card')
+						|Личные данные
+					li.cabinet_menu-item: a(href="cabinet_2.html").cabinet_menu-link.__is-active
+						+icon('map')
+						|Адрес доставки
+					li.cabinet_menu-item: a(href="cabinet_3.html").cabinet_menu-link
+						+icon('box')
+						|История заказов
+					li.cabinet_menu-item: a(href="#").cabinet_menu-link
+						+icon('sign-out')
+						|Выход
+
+			.cabinet_content
+				b.cabinet_title Адрес доставки
+
+				form(action="#" method="post").form
+					.form_tf-wrapper
+						label(for="street").form_tf-label Улица:
+						input(type="text" name="street" id="street" value="Юбилейная").form_tf
+
+					.form_tf-wrapper
+						label(for="house").form_tf-label Дом:
+						input(type="text" name="house" id="house" value="37").form_tf
+
+					.form_tf-wrapper
+						label(for="flat").form_tf-label Квартира:
+						input(type="text" name="flat" id="flat" value="209").form_tf
+
+					.form_actions
+						button(type="submit").btn.__light-blue Сохранить изменения

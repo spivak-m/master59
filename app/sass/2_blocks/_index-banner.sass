@@ -1,0 +1,70 @@
+.index-banner
+	width: 100%
+	position: relative
+	padding-top: 20px
+	padding-bottom: 10px
+	height: 460px
+	padding-left: 260px
+
+.index-banner_content
+	height: 100%
+	width: 100%
+	background-color: #e8eaf3
+
+.index-banner_slide
+	position: relative
+	height: 430px
+	overflow: hidden
+	background-position: 0 50%
+	background-repeat: no-repeat
+
+.index-banner_slide-content
+	width: 473px
+	position: absolute
+	top: 50%
+	left: 0
+	transform: translateY(-50%)
+	background-color: $blue
+	color: #fff
+	border-radius: 0 300px 300px 0
+	padding: 50px 125px 50px 30px
+	border: 2px solid rgba(255,255,255, .3)
+	border-left: none
+	box-shadow: 0 0 0 23px $blue
+
+.index-banner_slide_title
+	font-size: 2rem
+	line-height: 1
+	font-weight: 300
+	display: block
+	margin-bottom: 30px
+
+.index-banner_slide_text
+	font-size: .888rem
+	line-height: 1.5
+	font-weight: 300
+	margin: 0
+
+@media screen and (max-width: 1040px)
+	.index-banner
+		padding-left: 0
+		padding-top: 0
+		padding-bottom: 0
+		height: 300px
+		width: calc(100% + 40px)
+		margin-right: -20px
+		margin-left: -20px
+
+	.index-banner_slide
+		height: 300px
+
+	.index-banner_slide-content
+		width: 280px
+		padding: 35px 45px 35px 15px
+
+	.index-banner_slide_title
+		font-size: 1.25rem
+		margin-bottom: 20px
+
+	.index-banner_slide_text
+		font-size: .75rem

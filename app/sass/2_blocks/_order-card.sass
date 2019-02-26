@@ -1,0 +1,124 @@
+.order-card
+	border: 1px solid #e2e2e2
+	border-radius: 3px
+	overflow: hidden
+
+.order-card_header
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	background-color: #f5f5f5
+	color: #888888
+	display: 1px solid #e2e2e2
+	font-size: .722rem
+	line-height: 1
+	padding: 18px 20px
+	justify-content: space-between
+	align-items: center
+
+.order-card_content
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	align-items: center
+	padding: 25px 20px
+
+.order-card_col
+	width: calc(100% / 3)
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	flex-direction: column
+	align-items: flex-start
+
+	&:last-child
+		align-items: flex-end
+
+.oreder-card_row
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	align-items: center
+	font-size: .722rem
+	line-height: 1
+	color: #888
+	margin-bottom: 8px
+
+	&:last-child
+		margin-bottom: 0
+
+	&.__bold
+		font-size: .833rem
+		font-weight: 500
+		color: #2d2d2d
+
+.order-card_pieces
+	padding-right: 20px
+	position: relative
+
+	&::before
+		content: ""
+		display: block
+		width: 4px
+		height: 4px
+		border-radius: 50%
+		background-color: #575757
+		position: absolute
+		right: 8px
+		top: 50%
+		margin-top: -2px
+
+.order-card_status
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	align-items: center
+
+	.icon
+		font-size: 1.2em
+		margin-left: 6px
+
+.order-card_price-symb
+	font-weight: 400
+	color: #888
+	font-size: .866em
+
+@media screen and (max-width: 1040px)
+	.order-card_header
+		padding: 15px 10px
+		font-size: .812rem
+
+	.order-card_status .icon
+		font-size: 1em
+
+	.order-card_content
+		flex-direction: column
+		padding: 20px 10px
+
+	.order-card_col
+		width: 100%
+		margin-bottom: 20px
+		align-items: center
+
+		&:last-child
+			align-items: center
+			margin-bottom: 0
+
+			.btn
+				width: 100%
+
+	.oreder-card_row 
+		font-size: .812rem
+
+		&.__bold
+			font-size: .937rem

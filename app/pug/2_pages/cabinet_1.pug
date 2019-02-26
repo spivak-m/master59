@@ -1,0 +1,52 @@
+extends ../0_base/template
+
+block title
+	title Личный кабинет
+
+block content
+	.l-wrapper.page-content
+		ul.breadcrumbs
+			li.breadcrumbs_item: a(href="#").breadcrumbs_link Главная
+			li.breadcrumbs_item: a(href="#").breadcrumbs_link Личный кабинет
+
+		.page-header
+			h1.page-header_title Личный кабинет
+
+		.cabinet
+			.cabinet_menu
+				ul.cabinet_menu-list
+					li.cabinet_menu-item: a(href="cabinet_1.html").cabinet_menu-link.__is-active
+						+icon('address-card')
+						|Личные данные
+					li.cabinet_menu-item: a(href="cabinet_2.html").cabinet_menu-link
+						+icon('map')
+						|Адрес доставки
+					li.cabinet_menu-item: a(href="cabinet_3.html").cabinet_menu-link
+						+icon('box')
+						|История заказов
+					li.cabinet_menu-item: a(href="#").cabinet_menu-link
+						+icon('sign-out')
+						|Выход
+
+			.cabinet_content
+				b.cabinet_title Личные данные
+
+				form(action="#" method="post").form
+					.form_tf-wrapper
+						label(for="fullname").form_tf-label Фио:
+						input(type="text" name="fullname" id="fullname" placeholder="Иванов Иван Иванович").form_tf
+
+					.form_tf-wrapper
+						label(for="tel").form_tf-label Номер телефона:
+						input(type="text" name="tel" id="tel" placeholder="+7 910 123-45-67").form_tf
+
+					.form_tf-wrapper
+						label(for="email").form_tf-label Электронная почта:
+						input(type="text" name="email" id="email" placeholder="root@prostordesign.ru").form_tf
+
+					.form_tf-wrapper
+						label(for="pass").form_tf-label Пароль:
+						input(type="password" name="pass" id="pass" value="000000").form_tf
+
+					.form_actions
+						button(type="submit").btn.__light-blue Сохранить изменения

@@ -1,0 +1,141 @@
+extends ../0_base/template
+
+block title
+	title Каталог
+
+block content
+	.l-wrapper.page-content
+		ul.breadcrumbs
+			li.breadcrumbs_item: a(href="#").breadcrumbs_link Главная
+			li.breadcrumbs_item: a(href="#").breadcrumbs_link Сантехника
+			li.breadcrumbs_item: a(href="#").breadcrumbs_link Смесители и комплектующие
+			li.breadcrumbs_item: a(href="#").breadcrumbs_link Смесители
+
+		.page-header
+			h1.page-header_title Смесители
+
+			.page-header_settings
+				.page-header_sort.js-catalog-sorting
+					a(href="#").page-header_sort-select
+						span.page-header_sort-select-text сначала дешевые
+						+icon("sort")
+					ul.page-header_sort-list
+						li.page-header_sort-item: a(href="#").page-header_sort-link.__is-active сначала дешевые
+						li.page-header_sort-item: a(href="#").page-header_sort-link сначала дорогие
+						li.page-header_sort-item: a(href="#").page-header_sort-link сначала популярные
+						li.page-header_sort-item: a(href="#").page-header_sort-link сначала непопулярные
+
+				
+				a(href="#").page-header_filters.js-m-open-filter
+					+icon("filter")
+					|фильтры
+
+				.page-header_view
+					.catalog-view.js-catalog-view
+						a(href="#").catalog-view_item.__is-active: +icon('th')
+						a(href="#").catalog-view_item.__row: +icon('th-list')
+
+		.tags.js-tags
+			a(href="#").tags_link Прокладки 65
+			a(href="#").tags_link.__is-active Трубы 143
+			a(href="#").tags_link Краны шаровые 67
+			a(href="#").tags_link Шланги сантехнические 30
+			a(href="#").tags_link Канализация 32
+			a(href="#").tags_link Сифоны 38
+			a(href="#").tags_link Шланги 30
+			a(href="#").tags_link Канализация 32
+			a(href="#").tags_link Сифоны 38
+			a(href="#").tags_link Шланги сантехнические 30
+			a(href="#").tags_link Канализация 32
+			a(href="#").tags_link Сифоны 38
+		
+		section.catalog
+			.catalog_filter.js-m-filter
+				form(action="#" method="get").filter
+					a(href="#").filter_close-btn
+					.filter_groupe
+						b.filter_groupe-title Цена, ₽
+
+						.filter_price
+							input(type="num" name="min-price" value="0").filter_price-inpt.form_tf
+							input(type="num" name="max-price" value="9999").filter_price-inpt.form_tf
+
+					.filter_groupe
+						b.filter_groupe-title Бренд
+
+						ul.filter_options
+							li.filter_option
+								.form_checkbox-wrp
+									input(type="checkbox" name="brand" id="brand-1").form_checkbox
+									label(for="brand-1").form_checkbox-label Accoona
+							li.filter_option
+								.form_checkbox-wrp
+									input(type="checkbox" name="brand" id="brand-2").form_checkbox
+									label(for="brand-2").form_checkbox-label Frud
+							li.filter_option
+								.form_checkbox-wrp
+									input(type="checkbox" name="brand" id="brand-3").form_checkbox
+									label(for="brand-3").form_checkbox-label Gerhaus
+							li.filter_option
+								.form_checkbox-wrp
+									input(type="checkbox" name="brand" id="brand-4").form_checkbox
+									label(for="brand-4").form_checkbox-label Gross aqua
+							li.filter_option
+								.form_checkbox-wrp
+									input(type="checkbox" name="brand" id="brand-5").form_checkbox
+									label(for="brand-5").form_checkbox-label Ledeme
+
+					.filter_groupe
+						b.filter_groupe-title Покрытие
+
+						ul.filter_options
+							li.filter_option
+								.form_checkbox-wrp
+									input(type="checkbox" name="hover" id="hover-1").form_checkbox
+									label(for="hover-1").form_checkbox-label Хром
+							li.filter_option
+								.form_checkbox-wrp
+									input(type="checkbox" name="hover" id="hover-2").form_checkbox
+									label(for="hover-2").form_checkbox-label Краска
+							li.filter_option
+								.form_checkbox-wrp
+									input(type="checkbox" name="hover" id="hover-3").form_checkbox
+									label(for="hover-3").form_checkbox-label Керамика
+							li.filter_option
+								.form_checkbox-wrp
+									input(type="checkbox" name="hover" id="hover-4").form_checkbox
+									label(for="hover-4").form_checkbox-label Никель
+							li.filter_option
+								.form_checkbox-wrp
+									input(type="checkbox" name="hover" id="hover-5").form_checkbox
+									label(for="hover-5").form_checkbox-label Бронза
+
+			.catalog_content
+				.catalog_items.js-catalog-items
+					.catalog_item: +catalogCard()
+					.catalog_item: +catalogCard()
+					.catalog_item: +catalogCard()
+					.catalog_item: +catalogCard()
+					.catalog_item: +catalogCard()
+					.catalog_item: +catalogCard()
+					.catalog_item: +catalogCard()
+					.catalog_item: +catalogCard()
+					.catalog_item: +catalogCard()
+					.catalog_item: +catalogCard()
+					.catalog_item: +catalogCard()
+					.catalog_item: +catalogCard()
+					.catalog_item: +catalogCard()
+					.catalog_item: +catalogCard()
+					.catalog_item: +catalogCard()
+					.catalog_item: +catalogCard()
+					.catalog_item: +catalogCard()
+
+				.catalog_paginator
+					ul.paginator
+						li.paginator_item: a(href="#").paginator_link.__prev Назад
+						li.paginator_item: a(href="#").paginator_link 1
+						li.paginator_item: a(href="#").paginator_link.__is-active 2
+						li.paginator_item: a(href="#").paginator_link 3
+						li.paginator_item: a(href="#").paginator_link 4
+						li.paginator_item: a(href="#").paginator_link 5
+						li.paginator_item: a(href="#").paginator_link.__next Вперед

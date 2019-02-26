@@ -1,0 +1,226 @@
+.map
+	width: 100%
+	position: relative
+
+	iframe
+		width: 100%
+		height: 500px
+
+	&.__at-index
+
+		.map_wrapper
+			margin-bottom: 0
+
+		.map_container
+			position: absolute
+			top: 20px
+			bottom: 20px
+			background-color: #fff
+			width: 415px
+			padding-left: 20px
+			padding-right: 20px
+			padding-bottom: 20px
+			z-index: 333
+			display: -webkit-flex
+			display: -moz-flex
+			display: -ms-flex
+			display: -o-flex
+			display: flex
+			flex-direction: column
+			border-radius: 2px
+
+		.map_store-list
+			flex-direction: column
+			flex-wrap: nowrap
+			padding-right: 15px
+
+			> li:nth-child(n+1)
+				width: 100%
+				margin-bottom: 20px
+				margin-right: 0
+				margin-top: 0
+
+			> li:last-child
+				margin-bottom: 0
+
+			&::-webkit-scrollbar
+				width: 2px
+				background-color: #f5f5f5
+
+			&::-webkit-scrollbar-thumb 
+				background-color: #cecece
+
+		.map_store
+			height: auto
+
+.map_wrapper
+	width: 100%
+	height: 500px
+	background: url(../media/img/map.jpg) no-repeat 0 0
+	background-size: cover
+	margin-bottom: 40px
+
+.map_container
+	width: 100%
+	background-color: #fff
+
+.map_header
+	width: 100%
+	padding-top: 17px
+	padding-bottom: 17px
+	margin-bottom: 22px
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	border-bottom: 1px solid #aaa
+	position: relative
+
+	&::after
+		content: ""
+		display: block
+		position: absolute
+		bottom: -3px
+		left: 0
+		height: 3px
+		width: 154px
+		background-color: $blue
+
+.map_title
+	margin: 0
+	font-size: 1.444rem
+	line-height: 1
+	font-weight: 300
+	color: inherit
+	color: $blue
+
+.map_store-list
+	width: 100%
+	list-style: none
+	margin: 0
+	padding: 0
+	overflow-y: auto
+	height: 100%
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	flex-wrap: wrap
+
+	> li
+		width: calc((100% / 3) - (40px / 3))
+		margin-top: 20px
+		margin-right: 20px
+
+		&:nth-child(3n+3)
+			margin-right: 0
+
+		&:nth-child(-n+3)
+			margin-top: 0
+	
+.map_store
+	display: block
+	padding: 18px 20px
+	border: 1px solid #ececec
+	border-radius: 3px
+	text-decoration: none
+	height: 100%
+
+.map_store-address
+	display: block
+	font-size: .888rem
+	color: #000
+	font-weight: 500
+	margin-bottom: 10px
+
+	&:only-child
+		margin-bottom: 0
+
+.map_store-info
+	list-style: none
+	margin: 0
+	padding: 0
+	color: #888
+	font-size: .777rem
+	margin-bottom: 10px
+
+	&:last-child
+		margin-bottom: 0
+
+.map_store-info-row
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	align-items: center
+
+.map_store-info-cell
+
+	&:first-child
+		width: 110px
+		padding-right: 10px
+
+@media screen and (max-width: 1040px)
+	.map
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		flex-direction: column
+		align-items: flex-start
+
+		&.__at-index
+			.map_container
+				position: static
+				width: 100%
+				padding-left: 0
+				padding-right: 0
+				padding-bottom: 30px
+
+			.map_store-list
+				height: 250px
+				margin-bottom: 0
+
+	.map_wrapper
+		height: 340px
+		order: 1
+		margin-bottom: 0
+
+		iframe
+			height: inherit
+
+	.map_container
+		width: 100%
+		padding-left: 0
+		padding-right: 0
+
+	.map_store-list
+		flex-direction: column
+		flex-wrap: nowrap
+		margin-bottom: 30px
+
+		> li
+			&:nth-child(n+1)
+				width: 100%
+				margin: 0
+				margin-bottom: 10px
+
+			&:last-child
+				margin-bottom: 0
+
+	.map_store
+		padding: 10px
+
+	.map_store-address
+		font-size: .875rem
+		margin-bottom: 5px
+
+	.map_store-info
+		font-size: .75rem
+
+
+	

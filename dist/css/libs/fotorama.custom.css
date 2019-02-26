@@ -1,0 +1,39 @@
+@media screen and (min-width: 1040px) {
+	.fotorama__nav__frame {
+		display: -webkit-flex;
+		display: -moz-flex;
+		display: -ms-flex;
+		display: -o-flex;
+		display: flex;
+		-webkit-flex-direction: column;
+		-moz-flex-direction: column;
+		-ms-flex-direction: column;
+		-o-flex-direction: column;
+		flex-direction: column;
+	}
+	.fotorama__nav-wrap {
+		width: 67px;
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		margin-left: -70px;
+		overflow-y: auto;
+	}
+	.fotorama__nav-wrap::-webkit-scrollbar {
+		width: 0;
+		height: 0;
+		visibility: hidden;
+	}
+	.fotorama{
+		padding-left: 70px;
+	}
+	.fotorama__thumb-border {
+		display: none !important;
+	}
+	.fotorama__nav__frame.fotorama__active div {
+	    width: 60px;
+	    height: 60px;
+	    border: solid 2px #00afea;
+	}
+}

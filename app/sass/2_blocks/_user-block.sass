@@ -1,0 +1,81 @@
+.user-block
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	align-items: center
+
+.user-block_item
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	align-items: center
+	margin-right: 30px
+	text-decoration: none
+	font-size: .888rem
+	color: $blue
+
+	&:last-child
+		margin-right: 0
+
+	&.__m-menu
+		display: none
+
+.user-block_item-ic
+	position: relative
+	font-size: 1.3rem
+	margin-right: 10px
+
+	.icon
+		font-size: inherit
+
+.user-block_cart-counter
+	display: block
+	width: 14px
+	height: 14px
+	background-color: #ff0000
+	border-radius: 50%
+	font-size: .555rem
+	line-height: 1
+	padding-top: 3px
+	text-align: center
+	vertical-align: bottom
+	color: #fff
+	position: absolute
+	top: 0
+	right: 0
+	margin-right: -7px
+	margin-top: -7px
+	font-style: normal
+
+@media screen and (max-width: 1040px)
+	.user-block_item
+		font-size: 0
+		margin-right: 10px
+		width: 30px
+		height: 30px
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		justify-content: center
+		align-items: center
+
+		&.__m-menu
+			display: -webkit-flex
+			display: -moz-flex
+			display: -ms-flex
+			display: -o-flex
+			display: flex
+
+			.user-block_item-ic
+				font-size: .8rem
+
+	.user-block_item-ic
+		font-size: 1.1rem
+		font-weight: 700
+		margin-right: 0

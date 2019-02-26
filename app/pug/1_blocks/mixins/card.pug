@@ -1,0 +1,21 @@
+mixin card()
+	article.card&attributes(attributes)
+		a.card_img
+			img(src="media/img-p/placeholder-220x220.jpg", alt="")
+
+		.card_content
+			a(href="#").card_category Категория
+			a(href="#").card_title.
+				Радиатор отопительный 
+				VALFEX OPTIMA (алюминиевый) 
+				500 12 секций
+
+			.card_price
+				b 4680 
+				span ₽/шт
+
+			.card_actions
+				a(href="#").card_to-compare
+					+icon('random')
+					|Добавить в сравнение
+				a(href="#").btn.__full-width.__at-card В корзину

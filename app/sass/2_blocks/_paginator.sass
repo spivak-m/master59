@@ -1,0 +1,87 @@
+.paginator
+	list-style: none
+	padding: 0
+	margin: 0
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	align-items: center
+
+.paginator_item
+	margin-right: 10px
+
+	&:last-child
+		margin-right: 0
+
+.paginator_link
+	display: block
+	font-size: .777rem
+	line-height: 1
+	color: #aaa
+	font-weight: 500
+	border: 1px solid #ececec
+	border-radius: 3px
+	text-decoration: none
+	padding: 15px
+	width: 45px
+	height: 45px
+	text-align: center
+
+	&.__is-active
+		color: $blue
+		border-color: $blue
+		pointer-events: none
+
+	&.__prev,
+	&.__next
+		position: relative
+		width: auto
+
+		&::before
+			content: ""
+			display: block
+			width: 8px
+			height: 8px
+			border: 1px solid #aaa
+			border-right: 0
+			border-bottom: 0
+			position: absolute
+			top: 50%
+			margin-top: -4px
+
+	&.__prev
+		padding-left: 35px
+
+		&::before
+			transform: rotate(-45deg)
+			left: 20px
+	
+	&.__next
+		padding-right: 35px
+
+		&::before
+			transform: rotate(135deg)
+			right: 20px
+
+@media screen and (max-width: 1040px)
+	.paginator
+		justify-content: center
+
+	.paginator_item
+		display: none
+
+		&:nth-child(-n+4),
+		&:nth-last-child(1)
+			display: block
+
+	.paginator_link
+		font-size: .875rem
+
+		&.__prev,
+		&.__next
+			font-size: 0
+			width: 45px
+			padding-left: 43px
+			padding-right: 0

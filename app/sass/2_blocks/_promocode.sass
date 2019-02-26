@@ -1,0 +1,40 @@
+.promocode
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	width: 355px
+
+.promocode_input
+	flex-grow: 1px
+	width: 100%
+	margin-right: 11px
+
+.promocode_submit
+	padding-left: 20px
+	padding-right: 20px
+	text-transform: uppercase
+
+@media screen and (max-width: 1040px)
+	.promocode
+		width: 100%
+	
+	.promocode_submit
+		font-size: 0
+		position: relative
+		width: 80px
+
+		&::before
+			content: ""
+			position: absolute
+			top: 50%
+			left: 50%
+			display: block
+			width: 14px
+			height: 8px
+			margin-top: -6px
+			margin-left: -6px
+			border-bottom: 2px solid #fff
+			border-left: 2px solid #fff
+			transform: rotate(-45deg)

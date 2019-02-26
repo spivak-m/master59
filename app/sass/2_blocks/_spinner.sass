@@ -1,0 +1,61 @@
+.spinner
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	align-items: stretch
+
+.spinner_btn
+	display: block
+	width: 28px
+	height: 28px
+	border: none
+	position: relative
+	background-color: transparent
+	cursor: pointer
+	outline: none
+	
+	&.__dec::before,
+	&.__inc::before,
+	&.__inc::after
+		content: ""
+		display: block
+		width: 12px
+		height: 1px
+		background-color: $blue
+		position: absolute
+		top: 50%
+		left: 50%
+		margin-top: -1px
+		margin-left: -6px		
+
+	&.__inc::after
+		transform: rotate(90deg)
+
+	&:hover,
+	&.__is-disabled
+		opacity: .8
+
+	&.__is-disabled
+		pointer-events: none
+
+.spinner_vp
+	width: 32px
+	height: 28px
+	border: none
+	background-color: transparent
+	margin-right: 10px
+	margin-left: 10px
+	text-align: center
+	outline: none
+	font-size: .833rem
+	line-height: 1
+
+@media screen and (max-width: 1040px)
+	.spinner_btn
+	
+	&.__dec::before,
+	&.__inc::before,
+	&.__inc::after
+		width: 10px	

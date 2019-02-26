@@ -1,0 +1,31 @@
+.tags
+	color: #aaa
+	font-size: .777rem
+	margin-bottom: 50px
+
+.tags_link
+	display: inline-block
+	vertical-align: middle
+	color: inherit
+	text-decoration: none
+	margin-right: 15px
+	color: inherit
+	text-decoration: none
+
+	&:last-child
+		margin-right: 0
+
+	&:hover
+		opacity: .8
+
+	&.__is-active
+		color: $blue
+		pointer-events: none
+
+@media screen and (max-width: 1040px)
+	.tags
+		font-size: .875rem
+		margin-bottom: 20px
+
+	.tags_link
+		margin-bottom: 6px

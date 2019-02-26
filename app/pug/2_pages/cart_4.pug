@@ -1,0 +1,127 @@
+extends ../0_base/template
+
+block title
+	title Корзина
+
+block content
+	.l-wrapper.page-content
+		ul.breadcrumbs
+			li.breadcrumbs_item: a(href="#").breadcrumbs_link Главная
+			li.breadcrumbs_item: a(href="#").breadcrumbs_link Корзина
+
+		.page-header
+			h1.page-header_title Ваш заказ №45776
+
+		.cart
+			ul.cart_item-list
+				li.cart_item
+					.cart-card
+						.cart-card_img
+							img(src="media/img-p/placeholder-220x220.jpg", alt="")
+						.cart-card_content
+							.cart-card_info
+								a(href="#").cart-card_category Радиаторы отопительные
+								a(href="#").cart-card_name Радиатор отопительный Royal Thermo Revolution Bimetall 12 секций (биметалл)
+								span.cart-card_code Код 015546
+							.cart-card_spinner
+								.spinner.js-spinner
+									button(type="button").spinner_btn.__dec
+									input(type="text" value="1" disabled).spinner_vp
+									button(type="button").spinner_btn.__inc
+							.cart-card_totals
+								.cart-card_price
+									span.cart-card_price-num 240 
+									span.cart-card_price-symbol ₽
+								.cart-card_price-per-piece 240 <span class="cart-card_price-symbol">₽/шт</span>
+							.cart-card_actions
+				li.cart_item
+					.cart-card
+						.cart-card_img
+							img(src="media/img-p/placeholder-220x220.jpg", alt="")
+						.cart-card_content
+							.cart-card_info
+								a(href="#").cart-card_category Радиаторы отопительные
+								a(href="#").cart-card_name Радиатор отопительный Royal Thermo Revolution Bimetall 12 секций (биметалл)
+								span.cart-card_code Код 015546
+							.cart-card_spinner
+								.spinner.js-spinner
+									button(type="button").spinner_btn.__dec
+									input(type="text" value="1" disabled).spinner_vp
+									button(type="button").spinner_btn.__inc
+							.cart-card_totals
+								.cart-card_price
+									span.cart-card_price-num 240 
+									span.cart-card_price-symbol ₽
+								.cart-card_price-per-piece 240 <span class="cart-card_price-symbol">₽/шт</span>
+							.cart-card_actions
+				li.cart_item
+					.cart-card
+						.cart-card_img
+							img(src="media/img-p/placeholder-220x220.jpg", alt="")
+						.cart-card_content
+							.cart-card_info
+								a(href="#").cart-card_category Радиаторы отопительные
+								a(href="#").cart-card_name Радиатор отопительный Royal Thermo Revolution Bimetall 12 секций (биметалл)
+								span.cart-card_code Код 015546
+							.cart-card_spinner
+								.spinner.js-spinner
+									button(type="button").spinner_btn.__dec
+									input(type="text" value="1" disabled).spinner_vp
+									button(type="button").spinner_btn.__inc
+							.cart-card_totals
+								.cart-card_price
+									span.cart-card_price-num 240 
+									span.cart-card_price-symbol ₽
+								.cart-card_price-per-piece 240 <span class="cart-card_price-symbol">₽/шт</span>
+							.cart-card_actions
+
+			.cart_checkout
+				b.cart_section-title Детали заказа
+				
+				.cart_checkout-row
+					.cart_checkout-col
+						ul.cart_totals
+							li.cart_totals-item.__col
+								span.cart_totals-prop ФИО получателя
+								span.cart_totals-val Олегов Олег Олегович
+							li.cart_totals-item.__col
+								span.cart_totals-prop Данные для связи
+								span.cart_totals-val root@prostordesign.ru
+							li.cart_totals-item.__col
+								span.cart_totals-prop Адрес доставки
+								span.cart_totals-val ул. Советская площадь, д.5, кв. 207
+							li.cart_totals-item.__col
+								span.cart_totals-prop Комментарий
+								span.cart_totals-val Позвоните перед доставкой, пожалуйста. Осторожно, злая собака!
+
+					.cart_checkout-col
+						ul.cart_totals
+							li.cart_totals-item.__col
+								span.cart_totals-prop Количество товаров
+								span.cart_totals-val 13 <span class="cart_totals-val-symbol">шт.</span>
+							li.cart_totals-item.__col
+								span.cart_totals-prop Стоимость товаров
+								span.cart_totals-val 8 729 <span class="cart_totals-val-symbol">₽</span>
+							li.cart_totals-item.__col
+								span.cart_totals-prop Доставка
+								span.cart_totals-val самовывоз
+							li.cart_totals-item.__col
+								a(href="#").cart_totals-prop
+									|Способ оплаты
+									+icon('pencil-alt')
+								span.cart_totals-val наличные
+
+					.cart_checkout-col
+						ul.cart_totals
+							li.cart_totals-item.__bold
+								span.cart_totals-prop Статус заказа
+								span.cart_totals-prop в обработке
+							li.cart_totals-item.__bold
+								span.cart_totals-prop Общая сумма заказа
+								b.cart_totals-val 8 729 <span class="cart_totals-val-symbol">₽</span>
+							li.cart_totals-item.__line
+
+
+						.cart_actions.__at-aside
+							a(href="#").btn.__light-blue Перейти к оплате
+							a(href="#").btn.__light-grey Отменить заказ

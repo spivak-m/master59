@@ -1,0 +1,108 @@
+extends ../0_base/template
+
+block title
+	title Продукт
+
+block content
+	.l-wrapper.page-content
+		ul.breadcrumbs
+			li.breadcrumbs_item: a(href="#").breadcrumbs_link Главная
+			li.breadcrumbs_item: a(href="#").breadcrumbs_link Сантехника
+			li.breadcrumbs_item: a(href="#").breadcrumbs_link Смесители и комплектующие
+			li.breadcrumbs_item: a(href="#").breadcrumbs_link Смесители
+			li.breadcrumbs_item: a(href="#").breadcrumbs_link Frud
+
+		section.product
+			.product_gallery
+				.js-product-imgs
+					img(src="media/img-p/01.jpg", alt="")
+					img(src="media/img-p/02.jpg", alt="")
+					img(src="media/img-p/03.jpg", alt="")
+					img(src="media/img-p/04.jpg", alt="")
+					img(src="media/img-p/05.jpg", alt="")
+					img(src="media/img-p/06.jpg", alt="")
+					img(src="media/img-p/01.jpg", alt="")
+					img(src="media/img-p/02.jpg", alt="")
+					img(src="media/img-p/03.jpg", alt="")
+					img(src="media/img-p/04.jpg", alt="")
+					img(src="media/img-p/05.jpg", alt="")
+					img(src="media/img-p/06.jpg", alt="")
+
+			.product_info
+				.product_header
+					h1.product_title.
+						Смеситель Иркутск д/ванны (рез, пл.
+						мах) В-М-2 (512596)(биметалл)
+					span.product_code.
+						Код 022860
+
+				.product_price
+					span.product_price-count 6 666
+					span.product_price-label ₽/шт.
+				
+				.product_actions
+					a(href="#").product_to-compare
+						+icon('random')
+						|Добавить в сравнение
+					a(href="#").btn.__big.__full-width Добавить в корзину
+
+				ul.product_delivery
+					li.product_delivery-item
+						b.product_delivery-name
+							+icon('truck')
+							|Доставим сегодня
+						ul.product_delivery-timetable
+							li.product_delivery-time.__first.
+								c 10:00 до 20:00, перерыв 13:00 – 14:00
+							li.product_delivery-time
+								span Будни
+								span 10:00 – 20:00, перерыв 13:00 – 14:00
+							li.product_delivery-time
+								span Выходные
+								span 10:00 – 18:00
+
+					li.product_delivery-item
+						b.product_delivery-name
+							+icon('box')
+							|Самовывоз из 5 магазинов сегодня
+
+			.product_spec
+				.product_spec-header
+					b.product_spec-title Характеристики
+
+				ul.product_spec-list
+					li.product_spec-row
+						.product_spec-name: span Характеристика
+						.product_spec-value Значение
+					li.product_spec-row
+						.product_spec-name: span Характеристика
+						.product_spec-value Значение
+					li.product_spec-row
+						.product_spec-name: span Характеристика
+						.product_spec-value Значение
+					li.product_spec-row
+						.product_spec-name: span Характеристика
+						.product_spec-value Значение
+					li.product_spec-row
+						.product_spec-name: span Характеристика
+						.product_spec-value Значение
+					li.product_spec-row
+						.product_spec-name: span Характеристика
+						.product_spec-value Значение
+
+		.index-section
+			.index-section_header
+				h2.index-section_title Похожие товары
+				.index-section_carousel-controls
+					.carousel-nav.js-carousel-nav
+						a(href="#").carousel-nav_btn.__prev: +icon('nav-prev')
+						a(href="#").carousel-nav_btn.__next: +icon('nav-next')
+
+			.index-section_content.owl-carousel.owl-theme.js-items-carousel
+				+card()
+				+card()
+				+card()
+				+card()
+				+card()
+				+card()
+				+card()

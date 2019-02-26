@@ -1,0 +1,137 @@
+.payment
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	width: 100%
+
+.payment_radio
+	display: none
+
+	&:checked ~ .payment_label
+		background-color: $blue
+		color: #fff
+		pointer-events: none
+
+		.payment_title
+			color: inherit
+
+		.payment_item-icon
+			&::before,
+			&::after
+				display: block
+
+			.icon
+				color: #fff
+
+.payment_item
+	flex-grow: 1
+	flex-shrink: 1
+	width: 50%
+
+.payment_label
+	display: block
+	width: 100%
+	padding-top: 40px
+	padding-bottom: 40px
+	padding-left: 120px
+	padding-right: 70px
+	color: #888
+	background-color: #fff
+	font-size: .833rem
+	line-height: 1.3
+	position: relative
+	transition: .2s
+	cursor: pointer
+
+	&:hover
+		opacity: .8
+
+.payment_title
+	display: block
+	color: #2d2d2d
+	font-size: .888rem
+	line-height: 1
+	margin-bottom: 10px
+	font-weight: 500
+
+.payment_text
+	margin: 0
+
+.payment_item-icon
+	position: absolute
+	top: 50%
+	left: 35px
+	transform: translateY(-50%)
+	font-weight: 400
+	line-height: 1
+	font-size: 2.1rem
+	font-style: normal
+
+	&::before
+		content: ""
+		display: none
+		width: 20px
+		height: 20px
+		background-color: #fff
+		border-radius: 50%
+		position: absolute
+		top: 0
+		right: 0
+		margin-top: -10px
+		margin-right: -10px
+		color: $blue
+		font-size: .7rem
+		text-align: center
+		padding-top: 5px
+
+	&::after
+		content: ""
+		display: none
+		width: 11px
+		height: 5px
+		border-bottom: 2px solid $blue
+		border-left: 2px solid $blue
+		position: absolute
+		top: 0
+		right: 0
+		margin-top: -3px
+		margin-right: -6px
+		transform: rotate(-45deg)
+
+	.icon
+		font-size: inherit
+		font-weight: 400
+		color: #aaa
+
+@media screen and (max-width: 1040px)
+	.payment
+		flex-direction: row
+		align-items: stretch
+
+	.payment_item
+		width: 50%
+
+	.payment_label
+		flex-direction: column
+		padding: 15px
+		padding-top: 105px
+		align-items: center
+		text-align: center
+		height: 100%
+
+		&:hover
+			opacity: 1
+
+	.payment_title
+		font-size: .875rem
+		font-weight: 500
+
+	.payment_text
+		display: none
+
+	.payment_item-icon
+		top: 35px
+		left: 50%
+		transform: translateX(-50%)

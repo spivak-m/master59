@@ -1,0 +1,292 @@
+.cart
+	width: 100%
+
+.cart_item-list
+	list-style: none
+	padding: 0
+	margin: 0
+	margin-bottom: 30px
+
+.cart_item
+	margin-bottom: 20px
+
+	&:last-child
+		margin-bottom: 0
+
+.cart_actions
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	align-items: center
+	justify-content: space-between
+	padding-top: 30px
+
+	&.__at-aside
+		padding-top: 20px
+		flex-direction: column
+		align-items: stretch
+
+		.btn
+			margin-bottom: 10px
+
+			&:last-child
+				margin-bottom: 0
+
+.cart_foo
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	align-items: flex-start
+	padding: 30px
+	border: 1px solid #cecece
+	border-radius: 2px
+
+.cart_content
+	width: 100%
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	align-items: flex-start
+
+.cart_checkout
+	width: 100%
+	border: 1px solid #cecece
+	border-radius: 2px
+	padding: 10px 30px 30px
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	flex-direction: column
+
+	&.__like-aside
+		max-width: 327px
+		position: sticky
+		top: 0
+
+	&.__pt-30
+		padding-top: 30px
+
+.cart_checkout-row
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	justify-content: space-between
+
+.cart_checkout-col
+	max-width: 290px
+	min-width: 267px
+
+.cart_totals
+	list-style: none
+	padding: 0
+	margin: 0
+	flex-grow: 1
+
+	&.__content-width
+		flex-grow: 0
+
+.cart_totals-item
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	align-items: center
+	justify-content: space-between
+	margin-bottom: 12px
+
+	&:last-child
+			margin-bottom: 0
+
+	&.__bold
+
+		.cart_totals-prop
+			font-size: .833rem
+			color: #2d2d2d
+			font-weight: 500
+
+		.cart_totals-val
+			font-size: 1rem
+
+	&.__col
+		flex-direction: column
+		align-items: flex-start
+
+		.cart_totals-prop
+			margin-bottom: 7px
+
+	&.__line
+		width: 100%
+		height: 0
+		padding: 0
+		padding-top: 10px
+		margin: 0
+		margin-bottom: 20px
+		border-bottom: 1px solid #e2e2e2
+
+		&:last-child
+			margin-bottom: 0
+
+.cart_totals-prop
+	font-size: .777rem
+	line-height: 1
+	color: #888
+	text-decoration: none
+
+	.icon
+		font-size: .55rem
+		margin-left: 3px
+
+.cart_totals-val
+	font-size: .777rem
+	line-height: 1
+	color: #2d2d2d
+	font-weight: 500
+
+.cart_totals-val-symbol
+	color: #888
+	font-weight: 400
+	font-size: .777em
+
+.cart_totals-text
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	flex-direction: column
+	align-items: flex-end
+	font-size: .722rem
+	color: #888
+	line-height: 1.3
+	margin-right: 35px
+
+	b
+		font-size: .777rem
+		color: #2d2d2d
+		font-weight: 400
+
+.cart_totals-count
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	align-items: flex-end
+	font-size: 1.555rem
+	line-height: 1
+	color: #2d2d2d
+	font-weight: 500
+
+	span
+		font-size: 1.166rem
+		color: #888
+		padding-left: 6px
+		font-weight: 400
+
+.cart_form
+	width: 100%
+	max-width: 673px
+	margin-right: 20px
+	border: 1px solid #cecece
+	border-radius: 2px
+	padding: 10px 30px
+
+.cart_section-title
+	font-size: .888rem
+	line-height: 1
+	font-weight: 500
+	color: #2d2d2d
+	padding-top: 20px
+	padding-bottom: 20px
+
+@media screen and (max-width: 1040px)
+	.cart_content
+		flex-direction: column
+
+	.cart_checkout
+		padding: 10px
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		flex-direction: column
+
+		&.__pt-30
+			padding-top: 10px
+
+		&.__like-aside
+			max-width: initial
+			position: static
+			padding-bottom: 20px
+
+	.cart_form
+		margin-bottom: 30px
+		padding: 10px
+
+	.cart_checkout-row
+		flex-direction: column
+
+	.cart_checkout-col
+		min-width: initial
+		max-width: initial
+		margin-bottom: 25px
+
+		&:last-child
+			margin-bottom: 0
+
+	.cart_promocode
+		margin-bottom: 20px
+
+	.cart_totals-item
+		&.__bold
+			.cart_totals-prop
+				font-size: .937rem
+
+			.cart_totals-val
+				font-size: 1.125rem
+			
+	.cart_totals-text
+		align-items: flex-start
+		font-size: .812rem
+
+		b
+			font-size: .875rem
+
+	.cart_totals-count
+		font-size: 1.75rem
+
+	.cart_actions
+		flex-direction: column
+		align-items: center
+
+		.btn
+			width: 100%
+			max-width: 400px
+			margin-bottom: 20px
+
+			&:last-child
+				margin-bottom: 0
+
+	.cart_totals-prop,
+	.cart_totals-val
+		font-size: .875rem
+	
+	.cart_totals-val-symbol
+		font-size: .857em
+
+	.cart_section-title
+		font-size: 1rem
+		padding-top: 0
+		padding-bottom: 18px

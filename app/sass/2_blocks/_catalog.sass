@@ -1,0 +1,75 @@
+.catalog
+	width: 100%
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	align-items: flex-start
+
+.catalog_filter
+	width: 100%
+	max-width: 240px
+	border: 1px solid #f4f4f4
+	min-height: 200px
+	flex-shrink: 0
+	margin-right: 20px
+	padding: 20px
+	position: sticky
+	top: 20px
+	border-radius: 2px
+
+.catalog_items
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	flex-wrap: wrap
+
+	&.__row
+		.catalog_item
+			width: 100%
+			margin-right: 0
+
+.catalog_item
+	width: 240px
+	margin-right: 20px
+	margin-bottom: 10px
+
+	&:nth-child(3n+3)
+		margin-right: 0
+
+.catalog_paginator
+	padding-top: 20px
+	padding-bottom: 20px
+
+@media screen and (max-width: 1040px)
+	.catalog_filter
+		display: none
+		position: fixed
+		top: 0
+		bottom: 0
+		left: 0
+		right: 0
+		background-color: rgba(0,0,0, .5)
+		max-width: initial
+		width: 100%
+		padding-top: 50px
+		padding-left: 15px
+		padding-right: 15px
+		z-index: 800
+
+		&.__is-show
+			display: block
+
+	.catalog_content
+		width: 100%
+
+	.catalog_item
+		width: 100%
+		margin-right: 0
+	
+	.catalog_paginator
+		padding-top: 10px
+		padding-bottom: 10px

@@ -1,0 +1,102 @@
+extends ../0_base/template
+
+block title
+	title Личный кабинет
+
+block content
+	.l-wrapper.page-content
+		ul.breadcrumbs
+			li.breadcrumbs_item: a(href="#").breadcrumbs_link Главная
+			li.breadcrumbs_item: a(href="#").breadcrumbs_link Личный кабинет
+
+		.page-header
+			h1.page-header_title Личный кабинет
+
+		.cabinet
+			.cabinet_menu
+				ul.cabinet_menu-list
+					li.cabinet_menu-item: a(href="cabinet_1.html").cabinet_menu-link
+						+icon('address-card')
+						|Личные данные
+					li.cabinet_menu-item: a(href="cabinet_2.html").cabinet_menu-link
+						+icon('map')
+						|Адрес доставки
+					li.cabinet_menu-item: a(href="cabinet_3.html").cabinet_menu-link.__is-active
+						+icon('box')
+						|История заказов
+					li.cabinet_menu-item: a(href="#").cabinet_menu-link
+						+icon('sign-out')
+						|Выход
+
+			.cabinet_content
+				b.cabinet_title Адрес доставки
+
+				ul.order-history
+					li.order-history_item
+						.order-card
+							.order-card_header
+								time(datetime="2018-09-24").order-card_date 24 сентября 2018
+								span.order-card_status
+									|Обработка
+									+icon("clock")
+
+							.order-card_content
+								.order-card_col
+									.oreder-card_row.__bold
+										b Заказ № 123456
+									.oreder-card_row
+										span Доставка курьером
+								.order-card_col
+									.oreder-card_row.__bold
+										b.order-card_pieces 6 товаров
+										b.order-card_price 12 800 <span class="order-card_price-symb">₽</span>
+									.oreder-card_row
+										span Оплата наличными
+								.order-card_col
+									a(href="#").btn.__light-grey Детали заказа
+
+					li.order-history_item
+						.order-card
+							.order-card_header
+								time(datetime="2018-09-24").order-card_date 24 сентября 2018
+								span.order-card_status
+									|Выполнен
+									+icon("check-circle")
+
+							.order-card_content
+								.order-card_col
+									.oreder-card_row.__bold
+										b Заказ № 123456
+									.oreder-card_row
+										span Доставка курьером
+								.order-card_col
+									.oreder-card_row.__bold
+										b.order-card_pieces 6 товаров
+										b.order-card_price 12 800 <span class="order-card_price-symb">₽</span>
+									.oreder-card_row
+										span Оплата наличными
+								.order-card_col
+									a(href="#").btn.__light-grey Детали заказа
+
+					li.order-history_item
+						.order-card
+							.order-card_header
+								time(datetime="2018-09-24").order-card_date 24 сентября 2018
+								span.order-card_status
+									|Отменен
+									+icon("times-circle")
+
+							.order-card_content
+								.order-card_col
+									.oreder-card_row.__bold
+										b Заказ № 123456
+									.oreder-card_row
+										span Доставка курьером
+								.order-card_col
+									.oreder-card_row.__bold
+										b.order-card_pieces 6 товаров
+										b.order-card_price 12 800 <span class="order-card_price-symb">₽</span>
+									.oreder-card_row
+										span Оплата наличными
+								.order-card_col
+									a(href="#").btn.__light-grey Детали заказа

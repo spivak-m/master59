@@ -1,0 +1,154 @@
+.cart-card
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+
+.cart-card_info
+	max-width: 320px
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	flex-direction: column
+	align-items: flex-start
+
+.cart-card_content
+	width: 100%
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	justify-content: space-between
+	padding-top: 20px
+	padding-bottom: 20px
+
+.cart-card_img
+	width: 154px
+	height: 140px
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	align-items: center
+	justify-content: center
+	overflow: hidden
+	margin-right: 20px
+	line-height: 0
+	flex-shrink: 0
+
+.cart-card_category,
+.cart-card_code
+	font-size: .722rem
+	line-height: 1
+	color: #888
+	text-decoration: none
+
+.cart-card_category
+	margin-bottom: 8px
+
+.cart-card_name
+	font-size: .833rem
+	line-height: 1.3
+	color: #2d2d2d
+	text-decoration: none
+	margin-bottom: 10px
+
+.cart-card_delite
+	font-size: .83rem
+	line-height: 1
+	color: #aaa
+	text-decoration: none
+
+	.icon
+		font-size: inherit
+		color: inherit
+
+.cart-card_totals
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	flex-direction: column
+	align-items: flex-end
+	width: 130px
+
+.cart-card_price
+	font-size: 1.444rem
+	line-height: 1
+	font-weight: 500
+
+.cart-card_price-per-piece
+	font-size: .777rem
+	line-height: 1
+	color: #888
+	padding-top: 10px
+	display: none
+	font-weight: 500
+
+	&.__is-show
+		display: block
+
+.cart-card_price-symbol
+	font-size: .692em
+	color: #888
+	font-weight: 400
+
+@media screen and (max-width: 1040px)
+	.cart-card_img
+		width: 90px
+		height: 116px
+
+	.cart-card_content
+		width: auto
+		flex-grow: 1
+		flex-wrap: wrap
+		position: relative
+		padding-top: 0
+		padding-bottom: 0
+
+	.cart-card_info
+		width: 100%
+		padding-right: 36px
+
+	.cart-card_category,
+	.cart-card_code
+		font-size: .75rem
+
+	.cart-card_name
+		font-size: .812rem
+
+	.cart-card_category,
+	.cart-card_name
+		margin-bottom: 6px
+
+	.cart-card_spinner
+		width: 94px
+
+	.cart-card_totals
+		width: calc(100% - 94px)
+
+	.cart-card_price
+		font-size: 1.25rem
+
+	.cart-card_actions
+		position: static
+
+	.cart-card_delite
+		position: absolute
+		top: 0
+		right: 0
+		font-size: 1.08rem
+
+	.cart-card_price-per-piece.__is-show
+		display: none
+
+	.cart-card_price-symbol
+		font-size: .8em
+
+	

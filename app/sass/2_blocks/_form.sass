@@ -1,0 +1,166 @@
+.form
+	width: 100%
+
+.form_tf-wrapper
+	width: 100%
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	margin-bottom: 20px
+
+	&.__capcha
+		.form_tf
+			margin-right: 20px
+
+.form_capcha
+	width: 140px
+	flex-shrink: 0
+
+.form_tf-label
+	font-size: .833rem
+	line-height: 1
+	width: 25%
+	min-width: 150px
+	flex-shrink: 0
+	font-weight: 500
+	margin-top: 12px
+	margin-right: 10px
+
+.form_tf
+	width: 100%
+	font-size: .777rem
+	line-height: 1.3
+	border: 1px solid #cecece
+	border-radius: 2px
+	flex-grow: 1px
+	padding: 9px 10px
+	outline: none
+
+.form_actions
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	justify-content: center
+	margin-top: 30px
+
+	.btn
+		margin-right: 20px
+
+		&:last-child
+			margin-right: 0
+
+	&.__pass-remind
+		margin-top: 10px
+		font-size: .722rem
+		line-height: 1
+
+		a
+			margin-left: 6px
+
+.form_section-title
+	display: block
+	font-size: .888rem
+	line-height: 1
+	font-weight: 500
+	color: #2d2d2d
+	padding-top: 20px
+	padding-bottom: 20px
+
+.form_checkbox-wrp
+	width: 100%
+
+.form_checkbox
+	display: none
+
+	&:checked ~ .form_checkbox-label
+		color: #2d2d2d
+
+		&::before
+			background-color: $blue
+			border-color: $blue
+
+		&::after
+			display: block
+
+.form_checkbox-label
+	display: block
+	font-size: .777rem
+	line-height: 1
+	padding-left: 25px
+	position: relative
+	cursor: pointer
+	color: #aaa
+
+	&::before
+		content: ""
+		display: block
+		width: 18px
+		height: 18px
+		border: 1px solid #ececec
+		position: absolute
+		top: 50%
+		left: 0
+		margin-top: -9px
+		border-radius: 2px
+
+	&::after
+		content: ""
+		display: none
+		width: 6px
+		height: 10px
+		border-bottom: 2px solid #fff
+		border-right: 2px solid #fff
+		position: absolute
+		top: 50%
+		left: 6px
+		margin-top: -6px
+		transform: rotate(45deg)
+
+@media screen and (max-width: 1040px)
+
+	.form_tf-wrapper
+		flex-direction: column
+		margin-bottom: 8px
+
+		&.__capcha
+			flex-direction: row
+
+	.form_tf-label
+		width: 100%
+		margin: 0
+		margin-bottom: 8px
+		font-size: .937rem
+
+	.form_tf
+		font-size: .875rem
+
+	.form_checkbox-label
+		font-size: .875rem
+
+	.form_section-title
+		font-size: 1rem
+		font-weight: 500
+		padding-top: 0
+		padding-bottom: 20px
+
+	.form_actions
+		margin-top: 20px
+		flex-direction: column
+		align-items: flex-start
+
+		&.__pass-remind
+			flex-direction: row
+			justify-content: center
+			font-size: .812rem
+
+		.btn
+			width: 100%
+			margin-right: 0
+			margin-bottom: 10px
+
+			&:last-child
+				margin-bottom: 0
